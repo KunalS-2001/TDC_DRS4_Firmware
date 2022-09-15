@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">N1022</arg> has no load.
+</msg>
+
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">2</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">app_drs_trg_delay(2047),
+app_pmc_obufds_inst_bit_54_55/O</arg>
+To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
+</msg>
+
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="warning" file="MapLib" num="793" delta="old" >Bi-directional network <arg fmt="%s" index="1">P_IO_PMC_USR(43)</arg> is driven by a constant.  This can result in a short.  This can be fixed by removing the constant source or changing the bi-directional network.
+</msg>
+
+<msg type="warning" file="MapLib" num="793" delta="old" >Bi-directional network <arg fmt="%s" index="1">P_IO_PMC_USR(38)</arg> is driven by a constant.  This can result in a short.  This can be fixed by removing the constant source or changing the bi-directional network.
+</msg>
+
+<msg type="warning" file="MapLib" num="793" delta="old" >Bi-directional network <arg fmt="%s" index="1">P_IO_PMC_USR(36)</arg> is driven by a constant.  This can result in a short.  This can be fixed by removing the constant source or changing the bi-directional network.
+</msg>
+
+<msg type="warning" file="MapLib" num="793" delta="old" >Bi-directional network <arg fmt="%s" index="1">P_IO_PMC_USR(34)</arg> is driven by a constant.  This can result in a short.  This can be fixed by removing the constant source or changing the bi-directional network.
+</msg>
+
+<msg type="warning" file="MapLib" num="793" delta="old" >Bi-directional network <arg fmt="%s" index="1">P_IO_PMC_USR(32)</arg> is driven by a constant.  This can result in a short.  This can be fixed by removing the constant source or changing the bi-directional network.
+</msg>
+
+<msg type="warning" file="MapLib" num="793" delta="old" >Bi-directional network <arg fmt="%s" index="1">P_IO_PMC_USR(49)</arg> is driven by a constant.  This can result in a short.  This can be fixed by removing the constant source or changing the bi-directional network.
+</msg>
+
+<msg type="warning" file="MapLib" num="793" delta="old" >Bi-directional network <arg fmt="%s" index="1">P_IO_UC_FIFOADR0</arg> is driven by a constant.  This can result in a short.  This can be fixed by removing the constant source or changing the bi-directional network.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_I_CLK66</arg> connected to top level port <arg fmt="%s" index="2">P_I_CLK66</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(44)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(44)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(45)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(45)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(46)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(46)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(61)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(61)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(57)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(57)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(63)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(63)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(59)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(59)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(27)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(27)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(25)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(25)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(23)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(23)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(21)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(21)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(19)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(19)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(17)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(17)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(15)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(15)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(13)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(13)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(11)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(11)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(9)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(9)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(7)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(7)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(5)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(5)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(3)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(3)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_PMC_USR(1)</arg> connected to top level port <arg fmt="%s" index="2">P_IO_PMC_USR(1)</arg> has been removed.
+</msg>
+
+<msg type="warning" file="MapLib" num="701" delta="old" >Signal <arg fmt="%s" index="1">P_IO_UC_FLAGA</arg> connected to top level port <arg fmt="%s" index="2">P_IO_UC_FLAGA</arg> has been removed.
+</msg>
+
+<msg type="warning" file="Pack" num="2874" delta="old" >Trimming timing constraints from pin <arg fmt="%s" index="1">clocks_Inst_dcm1_clk132</arg>
+of frag <arg fmt="%s" index="2">PSCLK</arg> connected to power/ground net <arg fmt="%s" index="3">P_O_ECLK_IND_OBUF</arg>
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">app_drs_hard_trig</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+<msg type="warning" file="PhysDesignRules" num="372" delta="old" >Gated clock. Clock net <arg fmt="%s" index="1">app_drs_trigger</arg> is sourced by a combinatorial pin. This is not good design practice. Use the CE pin to control the loading of data into the flip-flop.
+</msg>
+
+</messages>
+

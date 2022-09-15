@@ -1,0 +1,2 @@
+# Output products list for <clk_wiz_0>
+clk_wiz_0_flist.txt

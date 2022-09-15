@@ -1,0 +1,849 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'drs4_eval5'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off
+-c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+Target Device  : xc3s400
+Target Package : tq144
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.55 $
+Mapped Date    : Thu Sep 15 05:17:41 2022
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   33
+Logic Utilization:
+  Number of Slice Flip Flops:         1,764 out of   7,168   24%
+  Number of 4 input LUTs:             5,127 out of   7,168   71%
+Logic Distribution:
+  Number of occupied Slices:          3,582 out of   3,584   99%
+    Number of Slices containing only related logic:   3,582 out of   3,582 100%
+    Number of Slices containing unrelated logic:          0 out of   3,582   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       5,188 out of   7,168   72%
+    Number used as logic:             5,127
+    Number used as a route-thru:         61
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 91 out of      97   93%
+    IOB Flip Flops:                      76
+    IOB Master Pads:                      1
+    IOB Slave Pads:                       1
+  Number of RAMB16s:                     16 out of      16  100%
+  Number of BUFGMUXs:                     4 out of       8   50%
+  Number of DCMs:                         2 out of       4   50%
+
+Average Fanout of Non-Clock Nets:                2.69
+
+Peak Memory Usage:  280 MB
+Total REAL time to MAP completion:  5 secs 
+Total CPU time to MAP completion:   5 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:793 - Bi-directional network P_IO_PMC_USR(43) is driven by a
+   constant.  This can result in a short.  This can be fixed by removing the
+   constant source or changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network P_IO_PMC_USR(38) is driven by a
+   constant.  This can result in a short.  This can be fixed by removing the
+   constant source or changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network P_IO_PMC_USR(36) is driven by a
+   constant.  This can result in a short.  This can be fixed by removing the
+   constant source or changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network P_IO_PMC_USR(34) is driven by a
+   constant.  This can result in a short.  This can be fixed by removing the
+   constant source or changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network P_IO_PMC_USR(32) is driven by a
+   constant.  This can result in a short.  This can be fixed by removing the
+   constant source or changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network P_IO_PMC_USR(49) is driven by a
+   constant.  This can result in a short.  This can be fixed by removing the
+   constant source or changing the bi-directional network.
+WARNING:MapLib:793 - Bi-directional network P_IO_UC_FIFOADR0 is driven by a
+   constant.  This can result in a short.  This can be fixed by removing the
+   constant source or changing the bi-directional network.
+WARNING:MapLib:701 - Signal P_I_CLK66 connected to top level port P_I_CLK66 has
+   been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(44) connected to top level port
+   P_IO_PMC_USR(44) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(45) connected to top level port
+   P_IO_PMC_USR(45) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(46) connected to top level port
+   P_IO_PMC_USR(46) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(61) connected to top level port
+   P_IO_PMC_USR(61) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(57) connected to top level port
+   P_IO_PMC_USR(57) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(63) connected to top level port
+   P_IO_PMC_USR(63) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(59) connected to top level port
+   P_IO_PMC_USR(59) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(27) connected to top level port
+   P_IO_PMC_USR(27) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(25) connected to top level port
+   P_IO_PMC_USR(25) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(23) connected to top level port
+   P_IO_PMC_USR(23) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(21) connected to top level port
+   P_IO_PMC_USR(21) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(19) connected to top level port
+   P_IO_PMC_USR(19) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(17) connected to top level port
+   P_IO_PMC_USR(17) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(15) connected to top level port
+   P_IO_PMC_USR(15) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(13) connected to top level port
+   P_IO_PMC_USR(13) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(11) connected to top level port
+   P_IO_PMC_USR(11) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(9) connected to top level port
+   P_IO_PMC_USR(9) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(7) connected to top level port
+   P_IO_PMC_USR(7) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(5) connected to top level port
+   P_IO_PMC_USR(5) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(3) connected to top level port
+   P_IO_PMC_USR(3) has been removed.
+WARNING:MapLib:701 - Signal P_IO_PMC_USR(1) connected to top level port
+   P_IO_PMC_USR(1) has been removed.
+WARNING:MapLib:701 - Signal P_IO_UC_FLAGA connected to top level port
+   P_IO_UC_FLAGA has been removed.
+WARNING:Pack:2874 - Trimming timing constraints from pin clocks_Inst_dcm1_clk132
+   of frag PSCLK connected to power/ground net P_O_ECLK_IND_OBUF
+WARNING:PhysDesignRules:372 - Gated clock. Clock net app_drs_hard_trig is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net app_drs_trigger is sourced
+   by a combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network N1022 has no load.
+INFO:LIT:395 - The above info message is repeated 2 more times for the following
+   (max. 5 shown):
+   app_drs_trg_delay(2047),
+   app_pmc_obufds_inst_bit_54_55/O
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 216 block(s) removed
+   9 block(s) optimized away
+ 131 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "app_drs_trg_delay(2047)" is loadless and has been removed.
+ Loadless block "app_delayed_trig_gen[2047].LUT1_inst" (ROM) removed.
+  The signal "app_drs_trg_delay(2046)" is loadless and has been removed.
+   Loadless block "app_delayed_trig_gen[2046].LUT1_inst" (ROM) removed.
+    The signal "app_drs_trg_delay(2045)" is loadless and has been removed.
+     Loadless block "app_delayed_trig_gen[2045].LUT1_inst" (ROM) removed.
+      The signal "app_drs_trg_delay(2044)" is loadless and has been removed.
+       Loadless block "app_delayed_trig_gen[2044].LUT1_inst" (ROM) removed.
+        The signal "app_drs_trg_delay(2043)" is loadless and has been removed.
+         Loadless block "app_delayed_trig_gen[2043].LUT1_inst" (ROM) removed.
+          The signal "app_drs_trg_delay(2042)" is loadless and has been removed.
+           Loadless block "app_delayed_trig_gen[2042].LUT1_inst" (ROM) removed.
+            The signal "app_drs_trg_delay(2041)" is loadless and has been removed.
+             Loadless block "app_delayed_trig_gen[2041].LUT1_inst" (ROM) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[11].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(11)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[11].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(11)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(11)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[11].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(11)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[11].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[13].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(13)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[13].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(13)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(13)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[13].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(13)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[13].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[15].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(15)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[15].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(15)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(15)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[15].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(15)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[15].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[17].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(17)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[17].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(17)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(17)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[17].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(17)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[17].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[19].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(19)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[19].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(19)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(19)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[19].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(19)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[19].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[1].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(1)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[1].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(1)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(1)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[1].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(1)" is loadless and has been
+removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[1].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[21].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(21)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[21].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(21)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(21)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[21].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(21)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[21].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[23].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(23)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[23].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(23)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(23)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[23].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(23)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[23].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[25].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(25)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[25].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(25)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(25)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[25].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(25)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[25].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[27].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(27)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[27].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(27)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(27)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[27].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(27)" is loadless and has
+been removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[27].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[28].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(28)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[28].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[29].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(29)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[29].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[32].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(32)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[32].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[34].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(34)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[34].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[35].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(35)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[35].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[36].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(36)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[36].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[37].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(37)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[37].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[38].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(38)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[38].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[39].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(39)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[39].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[3].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(3)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[3].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(3)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(3)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[3].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(3)" is loadless and has been
+removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[3].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[40].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(40)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[40].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[5].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(5)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[5].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(5)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(5)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[5].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(5)" is loadless and has been
+removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[5].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[7].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(7)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[7].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(7)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(7)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[7].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(7)" is loadless and has been
+removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[7].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_41_0_gen[9].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_41_0_data_from_pad(9)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_41_0_gen[9].U1/IBUF" (BUF) removed.
+   The signal "P_IO_PMC_USR(9)" is loadless and has been removed.
+    Loadless block "P_IO_PMC_USR(9)" (PAD) removed.
+    Loadless block "app_pmc_iofds_inst_bit_41_0_gen[9].U1/OBUFT" (TRI) removed.
+     The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(9)" is loadless and has been
+removed.
+      Loadless block "app_pmc_iofds_inst_bit_41_0_gen[9].FF1" (FF) removed.
+Loadless block "app_pmc_iofds_inst_bit_43_gen[0].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_43_data_from_pad" is loadless and has been
+removed.
+  Loadless block "app_pmc_iofds_inst_bit_43_gen[0].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_53_47_gen[0].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_53_47_data_from_pad(0)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_53_47_gen[0].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_53_47_gen[1].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_53_47_data_from_pad(1)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_53_47_gen[1].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_53_47_gen[2].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_53_47_data_from_pad(2)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_53_47_gen[2].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_53_47_gen[3].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_53_47_data_from_pad(3)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_53_47_gen[3].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_53_47_gen[5].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_53_47_data_from_pad(5)" is loadless and has
+been removed.
+  Loadless block "app_pmc_iofds_inst_bit_53_47_gen[5].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_56_gen[0].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_56_data_from_pad" is loadless and has been
+removed.
+  Loadless block "app_pmc_iofds_inst_bit_56_gen[0].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_58_gen[0].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_58_data_from_pad" is loadless and has been
+removed.
+  Loadless block "app_pmc_iofds_inst_bit_58_gen[0].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_60_gen[0].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_60_data_from_pad" is loadless and has been
+removed.
+  Loadless block "app_pmc_iofds_inst_bit_60_gen[0].U1/IBUF" (BUF) removed.
+Loadless block "app_pmc_iofds_inst_bit_62_gen[0].FF2" (FF) removed.
+ The signal "app_pmc_iofds_inst_bit_62_data_from_pad" is loadless and has been
+removed.
+  Loadless block "app_pmc_iofds_inst_bit_62_gen[0].U1/IBUF" (BUF) removed.
+Loadless block "clocks_inst_bufg_clk132" (CKBUF) removed.
+ The signal "clocks_clk132_tmp" is loadless and has been removed.
+Loadless block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_CLK180_BUFG_INST" (CKBUF) removed.
+ The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_CLK180_BUF" is loadless and has been removed.
+Loadless block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_CLK270_BUFG_INST" (CKBUF) removed.
+ The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_CLK270_BUF" is loadless and has been removed.
+Loadless block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_CLK90_BUFG_INST" (CKBUF) removed.
+ The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_CLK90_BUF" is loadless and has been removed.
+Loadless block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_CLK180_BUFG_INST" (CKBUF) removed.
+ The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_CLK180_BUF" is loadless and has been removed.
+Loadless block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_CLK270_BUFG_INST" (CKBUF) removed.
+ The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_CLK270_BUF" is loadless and has been removed.
+Loadless block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_CLK90_BUFG_INST" (CKBUF) removed.
+ The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_CLK90_BUF" is loadless and has been removed.
+Loadless block "usb2_racc_interface_uc_iofds_inst_gen[16].FF2" (FF) removed.
+ The signal "usb2_racc_interface_uc_iofds_inst_data_from_pad(16)" is loadless and
+has been removed.
+  Loadless block "usb2_racc_interface_uc_iofds_inst_gen[16].U1/IBUF" (BUF)
+removed.
+Loadless block "usb2_racc_interface_uc_iofds_inst_gen[17].FF2" (FF) removed.
+ The signal "usb2_racc_interface_uc_iofds_inst_data_from_pad(17)" is loadless and
+has been removed.
+  Loadless block "usb2_racc_interface_uc_iofds_inst_gen[17].U1/IBUF" (BUF)
+removed.
+Loadless block "usb2_racc_interface_uc_iofds_inst_gen[18].FF2" (FF) removed.
+ The signal "usb2_racc_interface_uc_iofds_inst_data_from_pad(18)" is loadless and
+has been removed.
+  Loadless block "usb2_racc_interface_uc_iofds_inst_gen[18].U1/IBUF" (BUF)
+removed.
+Loadless block "usb2_racc_interface_uc_iofds_inst_gen[19].FF2" (FF) removed.
+ The signal "usb2_racc_interface_uc_iofds_inst_data_from_pad(19)" is loadless and
+has been removed.
+  Loadless block "usb2_racc_interface_uc_iofds_inst_gen[19].U1/IBUF" (BUF)
+removed.
+Loadless block "usb2_racc_interface_uc_iofds_inst_gen[20].FF2" (FF) removed.
+ The signal "usb2_racc_interface_uc_iofds_inst_data_from_pad(20)" is loadless and
+has been removed.
+  Loadless block "usb2_racc_interface_uc_iofds_inst_gen[20].U1/IBUF" (BUF)
+removed.
+Loadless block "usb2_racc_interface_uc_iofds_inst_gen[21].FF2" (FF) removed.
+ The signal "usb2_racc_interface_uc_iofds_inst_data_from_pad(21)" is loadless and
+has been removed.
+  Loadless block "usb2_racc_interface_uc_iofds_inst_gen[21].U1/IBUF" (BUF)
+removed.
+Loadless block "usb2_racc_interface_uc_iofds_inst_gen[22].FF2" (FF) removed.
+ The signal "usb2_racc_interface_uc_iofds_inst_data_from_pad(22)" is loadless and
+has been removed.
+  Loadless block "usb2_racc_interface_uc_iofds_inst_gen[22].U1/IBUF" (BUF)
+removed.
+Loadless block "usb2_racc_interface_uc_iofds_inst_gen[23].FF2" (FF) removed.
+ The signal "usb2_racc_interface_uc_iofds_inst_data_from_pad(23)" is loadless and
+has been removed.
+  Loadless block "usb2_racc_interface_uc_iofds_inst_gen[23].U1/IBUF" (BUF)
+removed.
+   The signal "P_IO_UC_FLAGA" is loadless and has been removed.
+    Loadless block "P_IO_UC_FLAGA" (PAD) removed.
+    Loadless block "usb2_racc_interface_uc_iofds_inst_gen[23].U1/OBUFT" (TRI)
+removed.
+     The signal "usb2_racc_interface_uc_iofds_inst_data_to_pad(23)" is loadless and
+has been removed.
+      Loadless block "usb2_racc_interface_uc_iofds_inst_gen[23].FF1" (FF) removed.
+The signal "app_pmc_obufds_inst_bit_54_55/O" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "P_IO_PMC_USR(44)" is unused and has been removed.
+ Unused block "P_IO_PMC_USR_44_OBUFT" (TRI) removed.
+The signal "P_IO_PMC_USR(45)" is unused and has been removed.
+ Unused block "P_IO_PMC_USR_45_OBUFT" (TRI) removed.
+The signal "P_IO_PMC_USR(46)" is unused and has been removed.
+ Unused block "P_IO_PMC_USR_46_OBUFT" (TRI) removed.
+The signal "P_IO_PMC_USR(57)" is unused and has been removed.
+ Unused block "P_IO_PMC_USR_57_OBUFT" (TRI) removed.
+The signal "P_IO_PMC_USR(59)" is unused and has been removed.
+ Unused block "P_IO_PMC_USR_59_OBUFT" (TRI) removed.
+The signal "P_IO_PMC_USR(61)" is unused and has been removed.
+ Unused block "P_IO_PMC_USR_61_OBUFT" (TRI) removed.
+The signal "P_IO_PMC_USR(63)" is unused and has been removed.
+ Unused block "P_IO_PMC_USR_63_OBUFT" (TRI) removed.
+The signal "P_I_CLK66" is unused and has been removed.
+ Unused block "P_I_CLK66" (PAD) removed.
+The signal "P_I_CLK66_IBUFG" is unused and has been removed.
+ Unused block "P_I_CLK66_IBUFG" (CKBUF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(0)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[0].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(10)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[10].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(12)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[12].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(14)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[14].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(16)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[16].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(18)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[18].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(2)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[2].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(20)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[20].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(22)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[22].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(24)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[24].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(26)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[26].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(30)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[30].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(33)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[33].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(4)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[4].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(41)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[41].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(6)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[6].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_41_0_data_to_pad(8)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_41_0_gen[8].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_53_47_data_to_pad(4)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_53_47_gen[4].FF1" (FF) removed.
+The signal "app_pmc_iofds_inst_bit_53_47_data_to_pad(6)" is unused and has been
+removed.
+ Unused block "app_pmc_iofds_inst_bit_53_47_gen[6].FF1" (FF) removed.
+The signal "clocks_clk66_dcm2" is unused and has been removed.
+ Unused block "clocks_inst_bufg_clk66_dcm2" (CKBUF) removed.
+  The signal "clocks_clk66_dcm2_tmp" is unused and has been removed.
+The signal "clocks_dcm2_reset" is unused and has been removed.
+ Unused block "clocks_dcm2_reset" (FF) removed.
+  The signal "clocks_dcm2_reset_not0001" is unused and has been removed.
+   Unused block "clocks_dcm2_reset_not00011_INV_0" (BUF) removed.
+    The signal "clocks_dcm2_reset_n" is unused and has been removed.
+     Unused block "clocks_dcm2_reset_n" (SFF) removed.
+      The signal "clocks_dcm2_reset_delay_n(4)" is unused and has been removed.
+       Unused block "clocks_dcm2_reset_delay_n_4" (SFF) removed.
+        The signal "clocks_dcm2_reset_delay_n(3)" is unused and has been removed.
+         Unused block "clocks_dcm2_reset_delay_n_3" (SFF) removed.
+          The signal "clocks_dcm2_reset_delay_n(2)" is unused and has been removed.
+           Unused block "clocks_dcm2_reset_delay_n_2" (SFF) removed.
+            The signal "clocks_dcm2_reset_delay_n(1)" is unused and has been removed.
+             Unused block "clocks_dcm2_reset_delay_n_1" (SFF) removed.
+              The signal "clocks_dcm2_reset_delay_n(0)" is unused and has been removed.
+               Unused block "clocks_dcm2_reset_delay_n_0" (SFF) removed.
+The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_CLK0_BUF" is unused and has been removed.
+The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_clkOut0" is unused and has been removed.
+ Unused block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_CLK0_BUFG_INST" (CKBUF) removed.
+The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_CLK0_BUF" is unused and has been removed.
+The signal
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_clkOut0" is unused and has been removed.
+ Unused block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_CLK0_BUFG_INST" (CKBUF) removed.
+The signal "usb2_racc_interface_uc_iofds_inst_data_to_pad(24)" is unused and has
+been removed.
+ Unused block "usb2_racc_interface_uc_iofds_inst_gen[24].FF1" (FF) removed.
+The signal "usb2_racc_interface_uc_iofds_inst_data_to_pad(25)" is unused and has
+been removed.
+ Unused block "usb2_racc_interface_uc_iofds_inst_gen[25].FF1" (FF) removed.
+Unused block "P_IO_PMC_USR(44)" (PAD) removed.
+Unused block "P_IO_PMC_USR(45)" (PAD) removed.
+Unused block "P_IO_PMC_USR(46)" (PAD) removed.
+Unused block "P_IO_PMC_USR(57)" (PAD) removed.
+Unused block "P_IO_PMC_USR(59)" (PAD) removed.
+Unused block "P_IO_PMC_USR(61)" (PAD) removed.
+Unused block "P_IO_PMC_USR(63)" (PAD) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[0].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[10].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[12].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[14].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[16].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[18].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[20].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[22].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[24].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[26].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[2].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[30].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[33].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[41].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[4].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[6].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_41_0_gen[8].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_53_47_gen[4].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_iofds_inst_bit_53_47_gen[6].U1/OBUFT" (TRI) removed.
+Unused block "app_pmc_obufds_inst_bit_54_55/IBUFDS" (IBUFDS) removed.
+Unused block "clocks_Inst_dcm2_clk132" (DCM) removed.
+Unused block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerA_fourXOverSampler_clk_wiz_h
+ere_DCM_INST" (DCM) removed.
+Unused block
+"usb2_racc_interface_Inst_oversamplerTDC_overSamplerB_fourXOverSampler_clk_wiz_h
+ere_DCM_INST" (DCM) removed.
+Unused block "usb2_racc_interface_uc_iofds_inst_gen[24].U1/OBUFT" (TRI) removed.
+Unused block "usb2_racc_interface_uc_iofds_inst_gen[25].U1/OBUFT" (TRI) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+FDCPE 		app_pmc_iofds_inst_bit_41_0_gen[32].FF1
+   optimized to 1
+FDCPE 		app_pmc_iofds_inst_bit_41_0_gen[34].FF1
+   optimized to 1
+FDCPE 		app_pmc_iofds_inst_bit_41_0_gen[36].FF1
+   optimized to 1
+FDCPE 		app_pmc_iofds_inst_bit_41_0_gen[38].FF1
+   optimized to 1
+FDCPE 		app_pmc_iofds_inst_bit_43_gen[0].FF1
+   optimized to 1
+FDCPE 		app_pmc_iofds_inst_bit_53_47_gen[2].FF1
+   optimized to 1
+FDCPE 		usb2_racc_interface_uc_iofds_inst_gen[21].FF1
+   optimized to 1
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| P_IO_ECLK_IN                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| P_IO_ECLK_OUT                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | FAST |              |          |          |
+| P_IO_ETRG_IN                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| P_IO_ETRG_OUT                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | FAST |              |          |          |
+| P_IO_J42                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_J43                           | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_PMC_USR(0)                    | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(2)                    | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(4)                    | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(6)                    | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(8)                    | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(10)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(12)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(14)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(16)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(18)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(20)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(22)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(24)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(26)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(28)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(29)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(30)                   | IOB              | INPUT     | LVCMOS25             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(31)                   | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_PMC_USR(32)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_PMC_USR(33)                   | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(34)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_PMC_USR(35)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(36)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_PMC_USR(37)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(38)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_PMC_USR(39)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(40)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(41)                   | IOB              | INPUT     | LVCMOS25             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(42)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(43)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_PMC_USR(47)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(48)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(49)                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_PMC_USR(50)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(51)                   | IOB              | INPUT     | LVCMOS25             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(52)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(53)                   | IOB              | INPUT     | LVCMOS25             |       |          |      | INFF1        |          | IFD      |
+| P_IO_PMC_USR(54)                   | DIFFS            | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
+| P_IO_PMC_USR(55)                   | DIFFM            | OUTPUT    | LVDS_25              |       |          |      |              |          |          |
+| P_IO_PMC_USR(56)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(58)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(60)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_PMC_USR(62)                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_T19                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | FAST |              |          |          |
+| P_IO_T20                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | FAST |              |          |          |
+| P_IO_UC_FD(0)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(1)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(2)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(3)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(4)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(5)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(6)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(7)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(8)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(9)                      | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(10)                     | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(11)                     | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(12)                     | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(13)                     | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(14)                     | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FD(15)                     | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW | INFF1        |          | IFD      |
+|                                    |                  |           |                      |       |          |      | OFF1         |          |          |
+| P_IO_UC_FIFOADR0                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_IO_UC_FIFOADR1                   | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_UC_FLAGB                      | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_UC_FLAGC                      | IOB              | INPUT     | LVCMOS33             |       |          |      | INFF1        |          | IFD      |
+| P_IO_UC_PKTEND                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_UC_SLCS                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_UC_SLOE                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_UC_SLRD                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_IO_UC_SLWR                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF1         |          |          |
+| P_I_ATRG1                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| P_I_ATRG2                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| P_I_ATRG3                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| P_I_ATRG4                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| P_I_CLK33                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| P_I_J44                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| P_I_UC_PA0                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| P_O_CAL                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P_O_ECLK_IND                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P_O_ECLK_OUTD                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P_O_ETRG_IND                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P_O_ETRG_OUTD                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P_O_LED_GREEN                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_O_LED_YELLOW                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| P_O_TCA_CTRL                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -1,0 +1,2679 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf
+
+Design file:              drs4_eval5.ncd
+Physical constraint file: drs4_eval5.pcf
+Device,package,speed:     xc3s400,tq144,-4 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_P_I_CLK33 = PERIOD TIMEGRP "P_I_CLK33" 32 ns HIGH 50% 
+INPUT_JITTER 0.1 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1688 paths analyzed, 48 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  12.895ns.
+--------------------------------------------------------------------------------
+
+Paths for end point clocks_ps_incdec (SLICE_X9Y17.CE), 49 paths
+--------------------------------------------------------------------------------
+Slack:                  19.105ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(5)_12 (FF)
+  Destination:          clocks_ps_incdec (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      10.394ns (Levels of Logic = 3)
+  Clock Path Skew:      -2.451ns (1.914 - 4.365)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(5)_12 to clocks_ps_incdec
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y52.YQ       Tcko                  0.720   usb2_racc_interface_control_reg_arr(5)(13)
+                                                       usb2_racc_interface_control_reg_arr(5)_12
+    SLICE_X7Y48.F3       net (fanout=3)        2.710   usb2_racc_interface_control_reg_arr(5)(12)
+    SLICE_X7Y48.COUT     Topcyf                1.027   usb2_racc_interface_control_reg_arr(0)(11)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_lut(4)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(4)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(8)(27)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X7Y31.F1       net (fanout=14)       2.499   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X7Y31.X        Tilo                  0.551   clocks_ps_incdec_and0000
+                                                       clocks_ps_incdec_and00001
+    SLICE_X9Y17.CE       net (fanout=1)        2.157   clocks_ps_incdec_and0000
+    SLICE_X9Y17.CLK      Tceck                 0.602   clocks_ps_incdec
+                                                       clocks_ps_incdec
+    -------------------------------------------------  ---------------------------
+    Total                                     10.394ns (3.028ns logic, 7.366ns route)
+                                                       (29.1% logic, 70.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  19.215ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(5)_9 (FF)
+  Destination:          clocks_ps_incdec (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      10.285ns (Levels of Logic = 5)
+  Clock Path Skew:      -2.450ns (1.914 - 4.364)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(5)_9 to clocks_ps_incdec
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y56.XQ       Tcko                  0.720   usb2_racc_interface_control_reg_arr(5)(9)
+                                                       usb2_racc_interface_control_reg_arr(5)_9
+    SLICE_X7Y46.G3       net (fanout=3)        2.333   usb2_racc_interface_control_reg_arr(5)(9)
+    SLICE_X7Y46.COUT     Topcyg                1.039   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(1)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_lut(1)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(1)
+    SLICE_X7Y47.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(1)
+    SLICE_X7Y47.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(5)(31)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(2)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(3)
+    SLICE_X7Y48.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(3)
+    SLICE_X7Y48.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(0)(11)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(4)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(8)(27)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X7Y31.F1       net (fanout=14)       2.499   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X7Y31.X        Tilo                  0.551   clocks_ps_incdec_and0000
+                                                       clocks_ps_incdec_and00001
+    SLICE_X9Y17.CE       net (fanout=1)        2.157   clocks_ps_incdec_and0000
+    SLICE_X9Y17.CLK      Tceck                 0.602   clocks_ps_incdec
+                                                       clocks_ps_incdec
+    -------------------------------------------------  ---------------------------
+    Total                                     10.285ns (3.296ns logic, 6.989ns route)
+                                                       (32.0% logic, 68.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  19.364ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(5)_14 (FF)
+  Destination:          clocks_ps_incdec (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      10.135ns (Levels of Logic = 2)
+  Clock Path Skew:      -2.451ns (1.914 - 4.365)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(5)_14 to clocks_ps_incdec
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y53.YQ       Tcko                  0.720   usb2_racc_interface_control_reg_arr(5)(15)
+                                                       usb2_racc_interface_control_reg_arr(5)_14
+    SLICE_X6Y53.F2       net (fanout=3)        3.285   usb2_racc_interface_control_reg_arr(5)(14)
+    SLICE_X6Y53.COUT     Topcyf                1.084   usb2_racc_interface_control_reg_arr(5)(15)
+                                                       clocks_Mcompar_ps_shadow_cmp_ge0000_lut(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_ge0000_cy(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_ge0000_cy(7)
+    SLICE_X7Y31.F3       net (fanout=4)        1.736   clocks_ps_shadow_cmp_ge0000
+    SLICE_X7Y31.X        Tilo                  0.551   clocks_ps_incdec_and0000
+                                                       clocks_ps_incdec_and00001
+    SLICE_X9Y17.CE       net (fanout=1)        2.157   clocks_ps_incdec_and0000
+    SLICE_X9Y17.CLK      Tceck                 0.602   clocks_ps_incdec
+                                                       clocks_ps_incdec
+    -------------------------------------------------  ---------------------------
+    Total                                     10.135ns (2.957ns logic, 7.178ns route)
+                                                       (29.2% logic, 70.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clocks_ps_enable (SLICE_X9Y16.CE), 49 paths
+--------------------------------------------------------------------------------
+Slack:                  20.024ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(5)_14 (FF)
+  Destination:          clocks_ps_enable (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      9.475ns (Levels of Logic = 2)
+  Clock Path Skew:      -2.451ns (1.914 - 4.365)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(5)_14 to clocks_ps_enable
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y53.YQ       Tcko                  0.720   usb2_racc_interface_control_reg_arr(5)(15)
+                                                       usb2_racc_interface_control_reg_arr(5)_14
+    SLICE_X6Y53.F2       net (fanout=3)        3.285   usb2_racc_interface_control_reg_arr(5)(14)
+    SLICE_X6Y53.COUT     Topcyf                1.084   usb2_racc_interface_control_reg_arr(5)(15)
+                                                       clocks_Mcompar_ps_shadow_cmp_ge0000_lut(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_ge0000_cy(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_ge0000_cy(7)
+    SLICE_X6Y30.G2       net (fanout=4)        1.996   clocks_ps_shadow_cmp_ge0000
+    SLICE_X6Y30.Y        Tilo                  0.608   clocks_ps_state(0)
+                                                       clocks_ps_enable_not00011
+    SLICE_X9Y16.CE       net (fanout=1)        1.180   clocks_ps_enable_not0001
+    SLICE_X9Y16.CLK      Tceck                 0.602   clocks_ps_enable
+                                                       clocks_ps_enable
+    -------------------------------------------------  ---------------------------
+    Total                                      9.475ns (3.014ns logic, 6.461ns route)
+                                                       (31.8% logic, 68.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  20.126ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(5)_12 (FF)
+  Destination:          clocks_ps_enable (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      9.373ns (Levels of Logic = 3)
+  Clock Path Skew:      -2.451ns (1.914 - 4.365)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(5)_12 to clocks_ps_enable
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y52.YQ       Tcko                  0.720   usb2_racc_interface_control_reg_arr(5)(13)
+                                                       usb2_racc_interface_control_reg_arr(5)_12
+    SLICE_X7Y48.F3       net (fanout=3)        2.710   usb2_racc_interface_control_reg_arr(5)(12)
+    SLICE_X7Y48.COUT     Topcyf                1.027   usb2_racc_interface_control_reg_arr(0)(11)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_lut(4)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(4)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(8)(27)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X6Y30.G4       net (fanout=14)       2.398   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X6Y30.Y        Tilo                  0.608   clocks_ps_state(0)
+                                                       clocks_ps_enable_not00011
+    SLICE_X9Y16.CE       net (fanout=1)        1.180   clocks_ps_enable_not0001
+    SLICE_X9Y16.CLK      Tceck                 0.602   clocks_ps_enable
+                                                       clocks_ps_enable
+    -------------------------------------------------  ---------------------------
+    Total                                      9.373ns (3.085ns logic, 6.288ns route)
+                                                       (32.9% logic, 67.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  20.200ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(5)_14 (FF)
+  Destination:          clocks_ps_enable (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      9.299ns (Levels of Logic = 2)
+  Clock Path Skew:      -2.451ns (1.914 - 4.365)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(5)_14 to clocks_ps_enable
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y53.YQ       Tcko                  0.720   usb2_racc_interface_control_reg_arr(5)(15)
+                                                       usb2_racc_interface_control_reg_arr(5)_14
+    SLICE_X6Y53.F2       net (fanout=3)        3.285   usb2_racc_interface_control_reg_arr(5)(14)
+    SLICE_X6Y53.COUT     Topcyf                0.908   usb2_racc_interface_control_reg_arr(5)(15)
+                                                       clocks_Mcompar_ps_shadow_cmp_ge0000_cy(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_ge0000_cy(7)
+    SLICE_X6Y30.G2       net (fanout=4)        1.996   clocks_ps_shadow_cmp_ge0000
+    SLICE_X6Y30.Y        Tilo                  0.608   clocks_ps_state(0)
+                                                       clocks_ps_enable_not00011
+    SLICE_X9Y16.CE       net (fanout=1)        1.180   clocks_ps_enable_not0001
+    SLICE_X9Y16.CLK      Tceck                 0.602   clocks_ps_enable
+                                                       clocks_ps_enable
+    -------------------------------------------------  ---------------------------
+    Total                                      9.299ns (2.838ns logic, 6.461ns route)
+                                                       (30.5% logic, 69.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clocks_ps_state_0 (SLICE_X6Y30.CE), 50 paths
+--------------------------------------------------------------------------------
+Slack:                  20.143ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clocks_Inst_dcm3_clk_ps (OTHER)
+  Destination:          clocks_ps_state_0 (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      11.807ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         P_I_CLK33_IBUFG rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: clocks_Inst_dcm3_clk_ps to clocks_ps_state_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DCM_X0Y0.PSDONE      Tdcmino               0.017   clocks_Inst_dcm3_clk_ps
+                                                       clocks_Inst_dcm3_clk_ps
+    SLICE_X7Y30.G2       net (fanout=1)        9.900   clocks_ps_done
+    SLICE_X7Y30.Y        Tilo                  0.551   clocks_ps_state_0_not0001
+                                                       clocks_ps_state_0_not00011
+    SLICE_X6Y30.CE       net (fanout=1)        0.737   clocks_ps_state_0_not0001
+    SLICE_X6Y30.CLK      Tceck                 0.602   clocks_ps_state(0)
+                                                       clocks_ps_state_0
+    -------------------------------------------------  ---------------------------
+    Total                                     11.807ns (1.170ns logic, 10.637ns route)
+                                                       (9.9% logic, 90.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  21.866ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(5)_12 (FF)
+  Destination:          clocks_ps_state_0 (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      9.120ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.964ns (3.401 - 4.365)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(5)_12 to clocks_ps_state_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y52.YQ       Tcko                  0.720   usb2_racc_interface_control_reg_arr(5)(13)
+                                                       usb2_racc_interface_control_reg_arr(5)_12
+    SLICE_X7Y48.F3       net (fanout=3)        2.710   usb2_racc_interface_control_reg_arr(5)(12)
+    SLICE_X7Y48.COUT     Topcyf                1.027   usb2_racc_interface_control_reg_arr(0)(11)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_lut(4)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(4)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(8)(27)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X7Y30.G1       net (fanout=14)       2.645   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X7Y30.Y        Tilo                  0.551   clocks_ps_state_0_not0001
+                                                       clocks_ps_state_0_not00011
+    SLICE_X6Y30.CE       net (fanout=1)        0.737   clocks_ps_state_0_not0001
+    SLICE_X6Y30.CLK      Tceck                 0.602   clocks_ps_state(0)
+                                                       clocks_ps_state_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.120ns (3.028ns logic, 6.092ns route)
+                                                       (33.2% logic, 66.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  21.976ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(5)_9 (FF)
+  Destination:          clocks_ps_state_0 (FF)
+  Requirement:          32.000ns
+  Data Path Delay:      9.011ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.963ns (3.401 - 4.364)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    P_I_CLK33_IBUFG rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(5)_9 to clocks_ps_state_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y56.XQ       Tcko                  0.720   usb2_racc_interface_control_reg_arr(5)(9)
+                                                       usb2_racc_interface_control_reg_arr(5)_9
+    SLICE_X7Y46.G3       net (fanout=3)        2.333   usb2_racc_interface_control_reg_arr(5)(9)
+    SLICE_X7Y46.COUT     Topcyg                1.039   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(1)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_lut(1)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(1)
+    SLICE_X7Y47.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(1)
+    SLICE_X7Y47.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(5)(31)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(2)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(3)
+    SLICE_X7Y48.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(3)
+    SLICE_X7Y48.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(0)(11)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(4)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.CIN      net (fanout=1)        0.000   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(5)
+    SLICE_X7Y49.COUT     Tbyp                  0.128   usb2_racc_interface_control_reg_arr(8)(27)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(6)
+                                                       clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X7Y30.G1       net (fanout=14)       2.645   clocks_Mcompar_ps_shadow_cmp_gt0000_cy(7)
+    SLICE_X7Y30.Y        Tilo                  0.551   clocks_ps_state_0_not0001
+                                                       clocks_ps_state_0_not00011
+    SLICE_X6Y30.CE       net (fanout=1)        0.737   clocks_ps_state_0_not0001
+    SLICE_X6Y30.CLK      Tceck                 0.602   clocks_ps_state(0)
+                                                       clocks_ps_state_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.011ns (3.296ns logic, 5.715ns route)
+                                                       (36.6% logic, 63.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_P_I_CLK33 = PERIOD TIMEGRP "P_I_CLK33" 32 ns HIGH 50% INPUT_JITTER 0.1 ns;
+--------------------------------------------------------------------------------
+Slack: 11.779ns (max period limit - period)
+  Period: 16.000ns
+  Max period limit: 27.779ns (35.998MHz) (Tdcmpco)
+  Physical resource: clocks_Inst_dcm1_clk132/CLK2X
+  Logical resource: clocks_Inst_dcm1_clk132/CLK2X
+  Location pin: DCM_X0Y1.CLK2X
+  Clock network: clocks_clk66_dcm1_tmp
+--------------------------------------------------------------------------------
+Slack: 13.007ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 2.993ns (334.113MHz) (Tdcmpco)
+  Physical resource: clocks_Inst_dcm1_clk132/CLK2X
+  Logical resource: clocks_Inst_dcm1_clk132/CLK2X
+  Location pin: DCM_X0Y1.CLK2X
+  Clock network: clocks_clk66_dcm1_tmp
+--------------------------------------------------------------------------------
+Slack: 22.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 32.000ns
+  Low pulse: 16.000ns
+  Low pulse limit: 5.000ns (Tdcmpw_CLKIN_25_50)
+  Physical resource: clocks_Inst_dcm1_clk132/CLKIN
+  Logical resource: clocks_Inst_dcm1_clk132/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: clk33_nodll
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_TIG_I_MMCX_path" TIG;
+
+ 963 paths analyzed, 342 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point app_O_STATUS_REG_ARR_14_1 (SLICE_X48Y37.CLK), 10 paths
+--------------------------------------------------------------------------------
+Delay:                  14.525ns (data path)
+  Source:               P_I_ATRG4 (PAD)
+  Destination:          app_O_STATUS_REG_ARR_14_1 (FF)
+  Data Path Delay:      14.525ns (Levels of Logic = 7)
+
+  Maximum Data Path: P_I_ATRG4 to app_O_STATUS_REG_ARR_14_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P59.I                Tiopi                 1.918   P_I_ATRG4
+                                                       P_I_ATRG4
+                                                       P_I_ATRG4_IBUF
+    SLICE_X33Y55.G2      net (fanout=36)       4.276   P_I_ATRG4_IBUF
+    SLICE_X33Y55.Y       Tilo                  0.551   N2
+                                                       app_drs_hard_inp_3_mux00001
+    SLICE_X33Y55.F4      net (fanout=3)        0.024   app_drs_hard_inp(3)
+    SLICE_X33Y55.X       Tilo                  0.551   N2
+                                                       app_drs_hard_and11
+    SLICE_X34Y55.G2      net (fanout=2)        0.588   N2
+    SLICE_X34Y55.Y       Tilo                  0.608   app_IO_ETRG_OUT1178
+                                                       app_IO_ETRG_OUT1178_SW0
+    SLICE_X34Y55.F4      net (fanout=1)        0.360   N585
+    SLICE_X34Y55.X       Tilo                  0.608   app_IO_ETRG_OUT1178
+                                                       app_IO_ETRG_OUT1178
+    SLICE_X34Y54.G2      net (fanout=1)        0.262   app_IO_ETRG_OUT1178
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X48Y37.CLK     net (fanout=36)       2.968   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     14.525ns (5.452ns logic, 9.073ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+Delay:                  14.220ns (data path)
+  Source:               P_I_ATRG1 (PAD)
+  Destination:          app_O_STATUS_REG_ARR_14_1 (FF)
+  Data Path Delay:      14.220ns (Levels of Logic = 6)
+
+  Maximum Data Path: P_I_ATRG1 to app_O_STATUS_REG_ARR_14_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P70.I                Tiopi                 1.918   P_I_ATRG1
+                                                       P_I_ATRG1
+                                                       P_I_ATRG1_IBUF
+    SLICE_X35Y54.G2      net (fanout=36)       4.692   P_I_ATRG1_IBUF
+    SLICE_X35Y54.Y       Tilo                  0.551   app_IO_ETRG_OUT194
+                                                       app_drs_hard_inp_0_mux00001
+    SLICE_X32Y54.G2      net (fanout=2)        0.623   app_drs_hard_inp(0)
+    SLICE_X32Y54.Y       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT14
+    SLICE_X32Y54.F4      net (fanout=1)        0.015   app_IO_ETRG_OUT14
+    SLICE_X32Y54.X       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT1190_SW0
+    SLICE_X34Y54.G4      net (fanout=1)        0.426   N587
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X48Y37.CLK     net (fanout=36)       2.968   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     14.220ns (4.901ns logic, 9.319ns route)
+                                                       (34.5% logic, 65.5% route)
+
+--------------------------------------------------------------------------------
+Delay:                  13.722ns (data path)
+  Source:               P_I_ATRG2 (PAD)
+  Destination:          app_O_STATUS_REG_ARR_14_1 (FF)
+  Data Path Delay:      13.722ns (Levels of Logic = 6)
+
+  Maximum Data Path: P_I_ATRG2 to app_O_STATUS_REG_ARR_14_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P68.I                Tiopi                 1.918   P_I_ATRG2
+                                                       P_I_ATRG2
+                                                       P_I_ATRG2_IBUF
+    SLICE_X35Y55.F1      net (fanout=36)       4.386   P_I_ATRG2_IBUF
+    SLICE_X35Y55.X       Tilo                  0.551   app_drs_hard_inp(1)
+                                                       app_drs_hard_inp_1_mux00001
+    SLICE_X32Y54.G4      net (fanout=2)        0.431   app_drs_hard_inp(1)
+    SLICE_X32Y54.Y       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT14
+    SLICE_X32Y54.F4      net (fanout=1)        0.015   app_IO_ETRG_OUT14
+    SLICE_X32Y54.X       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT1190_SW0
+    SLICE_X34Y54.G4      net (fanout=1)        0.426   N587
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X48Y37.CLK     net (fanout=36)       2.968   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     13.722ns (4.901ns logic, 8.821ns route)
+                                                       (35.7% logic, 64.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point app_O_STATUS_REG_ARR_14_0 (SLICE_X48Y37.CLK), 10 paths
+--------------------------------------------------------------------------------
+Delay:                  14.525ns (data path)
+  Source:               P_I_ATRG4 (PAD)
+  Destination:          app_O_STATUS_REG_ARR_14_0 (FF)
+  Data Path Delay:      14.525ns (Levels of Logic = 7)
+
+  Maximum Data Path: P_I_ATRG4 to app_O_STATUS_REG_ARR_14_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P59.I                Tiopi                 1.918   P_I_ATRG4
+                                                       P_I_ATRG4
+                                                       P_I_ATRG4_IBUF
+    SLICE_X33Y55.G2      net (fanout=36)       4.276   P_I_ATRG4_IBUF
+    SLICE_X33Y55.Y       Tilo                  0.551   N2
+                                                       app_drs_hard_inp_3_mux00001
+    SLICE_X33Y55.F4      net (fanout=3)        0.024   app_drs_hard_inp(3)
+    SLICE_X33Y55.X       Tilo                  0.551   N2
+                                                       app_drs_hard_and11
+    SLICE_X34Y55.G2      net (fanout=2)        0.588   N2
+    SLICE_X34Y55.Y       Tilo                  0.608   app_IO_ETRG_OUT1178
+                                                       app_IO_ETRG_OUT1178_SW0
+    SLICE_X34Y55.F4      net (fanout=1)        0.360   N585
+    SLICE_X34Y55.X       Tilo                  0.608   app_IO_ETRG_OUT1178
+                                                       app_IO_ETRG_OUT1178
+    SLICE_X34Y54.G2      net (fanout=1)        0.262   app_IO_ETRG_OUT1178
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X48Y37.CLK     net (fanout=36)       2.968   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     14.525ns (5.452ns logic, 9.073ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+Delay:                  14.220ns (data path)
+  Source:               P_I_ATRG1 (PAD)
+  Destination:          app_O_STATUS_REG_ARR_14_0 (FF)
+  Data Path Delay:      14.220ns (Levels of Logic = 6)
+
+  Maximum Data Path: P_I_ATRG1 to app_O_STATUS_REG_ARR_14_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P70.I                Tiopi                 1.918   P_I_ATRG1
+                                                       P_I_ATRG1
+                                                       P_I_ATRG1_IBUF
+    SLICE_X35Y54.G2      net (fanout=36)       4.692   P_I_ATRG1_IBUF
+    SLICE_X35Y54.Y       Tilo                  0.551   app_IO_ETRG_OUT194
+                                                       app_drs_hard_inp_0_mux00001
+    SLICE_X32Y54.G2      net (fanout=2)        0.623   app_drs_hard_inp(0)
+    SLICE_X32Y54.Y       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT14
+    SLICE_X32Y54.F4      net (fanout=1)        0.015   app_IO_ETRG_OUT14
+    SLICE_X32Y54.X       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT1190_SW0
+    SLICE_X34Y54.G4      net (fanout=1)        0.426   N587
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X48Y37.CLK     net (fanout=36)       2.968   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     14.220ns (4.901ns logic, 9.319ns route)
+                                                       (34.5% logic, 65.5% route)
+
+--------------------------------------------------------------------------------
+Delay:                  13.722ns (data path)
+  Source:               P_I_ATRG2 (PAD)
+  Destination:          app_O_STATUS_REG_ARR_14_0 (FF)
+  Data Path Delay:      13.722ns (Levels of Logic = 6)
+
+  Maximum Data Path: P_I_ATRG2 to app_O_STATUS_REG_ARR_14_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P68.I                Tiopi                 1.918   P_I_ATRG2
+                                                       P_I_ATRG2
+                                                       P_I_ATRG2_IBUF
+    SLICE_X35Y55.F1      net (fanout=36)       4.386   P_I_ATRG2_IBUF
+    SLICE_X35Y55.X       Tilo                  0.551   app_drs_hard_inp(1)
+                                                       app_drs_hard_inp_1_mux00001
+    SLICE_X32Y54.G4      net (fanout=2)        0.431   app_drs_hard_inp(1)
+    SLICE_X32Y54.Y       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT14
+    SLICE_X32Y54.F4      net (fanout=1)        0.015   app_IO_ETRG_OUT14
+    SLICE_X32Y54.X       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT1190_SW0
+    SLICE_X34Y54.G4      net (fanout=1)        0.426   N587
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X48Y37.CLK     net (fanout=36)       2.968   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     13.722ns (4.901ns logic, 8.821ns route)
+                                                       (35.7% logic, 64.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point app_drs_trig_ff (SLICE_X38Y50.CLK), 10 paths
+--------------------------------------------------------------------------------
+Delay:                  14.498ns (data path)
+  Source:               P_I_ATRG4 (PAD)
+  Destination:          app_drs_trig_ff (FF)
+  Data Path Delay:      14.498ns (Levels of Logic = 7)
+
+  Maximum Data Path: P_I_ATRG4 to app_drs_trig_ff
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P59.I                Tiopi                 1.918   P_I_ATRG4
+                                                       P_I_ATRG4
+                                                       P_I_ATRG4_IBUF
+    SLICE_X33Y55.G2      net (fanout=36)       4.276   P_I_ATRG4_IBUF
+    SLICE_X33Y55.Y       Tilo                  0.551   N2
+                                                       app_drs_hard_inp_3_mux00001
+    SLICE_X33Y55.F4      net (fanout=3)        0.024   app_drs_hard_inp(3)
+    SLICE_X33Y55.X       Tilo                  0.551   N2
+                                                       app_drs_hard_and11
+    SLICE_X34Y55.G2      net (fanout=2)        0.588   N2
+    SLICE_X34Y55.Y       Tilo                  0.608   app_IO_ETRG_OUT1178
+                                                       app_IO_ETRG_OUT1178_SW0
+    SLICE_X34Y55.F4      net (fanout=1)        0.360   N585
+    SLICE_X34Y55.X       Tilo                  0.608   app_IO_ETRG_OUT1178
+                                                       app_IO_ETRG_OUT1178
+    SLICE_X34Y54.G2      net (fanout=1)        0.262   app_IO_ETRG_OUT1178
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X38Y50.CLK     net (fanout=36)       2.941   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     14.498ns (5.452ns logic, 9.046ns route)
+                                                       (37.6% logic, 62.4% route)
+
+--------------------------------------------------------------------------------
+Delay:                  14.193ns (data path)
+  Source:               P_I_ATRG1 (PAD)
+  Destination:          app_drs_trig_ff (FF)
+  Data Path Delay:      14.193ns (Levels of Logic = 6)
+
+  Maximum Data Path: P_I_ATRG1 to app_drs_trig_ff
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P70.I                Tiopi                 1.918   P_I_ATRG1
+                                                       P_I_ATRG1
+                                                       P_I_ATRG1_IBUF
+    SLICE_X35Y54.G2      net (fanout=36)       4.692   P_I_ATRG1_IBUF
+    SLICE_X35Y54.Y       Tilo                  0.551   app_IO_ETRG_OUT194
+                                                       app_drs_hard_inp_0_mux00001
+    SLICE_X32Y54.G2      net (fanout=2)        0.623   app_drs_hard_inp(0)
+    SLICE_X32Y54.Y       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT14
+    SLICE_X32Y54.F4      net (fanout=1)        0.015   app_IO_ETRG_OUT14
+    SLICE_X32Y54.X       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT1190_SW0
+    SLICE_X34Y54.G4      net (fanout=1)        0.426   N587
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X38Y50.CLK     net (fanout=36)       2.941   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     14.193ns (4.901ns logic, 9.292ns route)
+                                                       (34.5% logic, 65.5% route)
+
+--------------------------------------------------------------------------------
+Delay:                  13.695ns (data path)
+  Source:               P_I_ATRG2 (PAD)
+  Destination:          app_drs_trig_ff (FF)
+  Data Path Delay:      13.695ns (Levels of Logic = 6)
+
+  Maximum Data Path: P_I_ATRG2 to app_drs_trig_ff
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P68.I                Tiopi                 1.918   P_I_ATRG2
+                                                       P_I_ATRG2
+                                                       P_I_ATRG2_IBUF
+    SLICE_X35Y55.F1      net (fanout=36)       4.386   P_I_ATRG2_IBUF
+    SLICE_X35Y55.X       Tilo                  0.551   app_drs_hard_inp(1)
+                                                       app_drs_hard_inp_1_mux00001
+    SLICE_X32Y54.G4      net (fanout=2)        0.431   app_drs_hard_inp(1)
+    SLICE_X32Y54.Y       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT14
+    SLICE_X32Y54.F4      net (fanout=1)        0.015   app_IO_ETRG_OUT14
+    SLICE_X32Y54.X       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT1190_SW0
+    SLICE_X34Y54.G4      net (fanout=1)        0.426   N587
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X34Y54.F1      net (fanout=2)        0.595   N163
+    SLICE_X34Y54.X       Tilo                  0.608   app_drs_hard_trig
+                                                       app_drs_hard_trig1
+    SLICE_X38Y50.CLK     net (fanout=36)       2.941   app_drs_hard_trig
+    -------------------------------------------------  ---------------------------
+    Total                                     13.695ns (4.901ns logic, 8.794ns route)
+                                                       (35.8% logic, 64.2% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_TIG_O_LED_path" TIG;
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point P_O_LED_GREEN (P132.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay:                  8.435ns (data path)
+  Source:               app_drs_led_green (FF)
+  Destination:          P_O_LED_GREEN (PAD)
+  Data Path Delay:      8.435ns (Levels of Logic = 1)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+
+  Maximum Data Path: app_drs_led_green to P_O_LED_GREEN
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y28.XQ      Tcko                  0.720   app_drs_led_green
+                                                       app_drs_led_green
+    P132.O1              net (fanout=3)        2.912   app_drs_led_green
+    P132.PAD             Tioop                 4.803   P_O_LED_GREEN
+                                                       P_O_LED_GREEN_OBUF
+                                                       P_O_LED_GREEN
+    -------------------------------------------------  ---------------------------
+    Total                                      8.435ns (5.523ns logic, 2.912ns route)
+                                                       (65.5% logic, 34.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point P_O_LED_YELLOW (P137.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay:                  7.743ns (data path)
+  Source:               usb2_racc_interface_control_reg_arr(0)_18 (FF)
+  Destination:          P_O_LED_YELLOW (PAD)
+  Data Path Delay:      7.743ns (Levels of Logic = 1)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(0)_18 to P_O_LED_YELLOW
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y44.YQ      Tcko                  0.720   usb2_racc_interface_control_reg_arr(0)(19)
+                                                       usb2_racc_interface_control_reg_arr(0)_18
+    P137.O1              net (fanout=2)        2.220   usb2_racc_interface_control_reg_arr(0)(18)
+    P137.PAD             Tioop                 4.803   P_O_LED_YELLOW
+                                                       P_O_LED_YELLOW_OBUF
+                                                       P_O_LED_YELLOW
+    -------------------------------------------------  ---------------------------
+    Total                                      7.743ns (5.523ns logic, 2.220ns route)
+                                                       (71.3% logic, 28.7% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PATH "TS_TIG_O_ADCCLK_path" TIG;
+
+ 1 path analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+--------------------------------------------------------------------------------
+
+Paths for end point P_IO_PMC_USR(28) (P135.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay:                  4.810ns (data path)
+  Source:               app_pmc_iofds_inst_bit_41_0_gen[28].FF1 (FF)
+  Destination:          P_IO_PMC_USR(28) (PAD)
+  Data Path Delay:      4.810ns (Levels of Logic = 0)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+
+  Maximum Data Path: app_pmc_iofds_inst_bit_41_0_gen[28].FF1 to P_IO_PMC_USR(28)
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P135.PAD             Tiockp                4.810   P_IO_PMC_USR(28)
+                                                       app_pmc_iofds_inst_bit_41_0_gen[28].FF1
+                                                       app_pmc_iofds_inst_bit_41_0_gen[28].U1/OBUFT
+                                                       P_IO_PMC_USR(28)
+    -------------------------------------------------  ---------------------------
+    Total                                      4.810ns (4.810ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clocks_clk33_tmp = PERIOD TIMEGRP "clocks_clk33_tmp" 
+TS_P_I_CLK33 HIGH 50%         INPUT_JITTER 0.1 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 33677 paths analyzed, 4541 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  27.780ns.
+--------------------------------------------------------------------------------
+
+Paths for end point usb2_racc_interface_uc_data_o_8 (SLICE_X29Y56.F2), 64 paths
+--------------------------------------------------------------------------------
+Slack:                  2.110ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[1].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_8 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      13.839ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.001ns (1.823 - 1.824)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[1].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y6.DOA8     Tbcko                 2.394   drs_dpram_dpram_gen[1].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[1].ramb16_s36_s36_inst.A
+    SLICE_X35Y29.G1      net (fanout=1)        5.720   drs_dpram_block_do_a(1)(8)
+    SLICE_X35Y29.F5      Tif5                  0.739   drs_dpram_Mmux_O_D_RD_A_6_f530
+                                                       drs_dpram_Mmux_O_D_RD_A_830
+                                                       drs_dpram_Mmux_O_D_RD_A_6_f5_29
+    SLICE_X35Y28.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_6_f530
+    SLICE_X35Y28.FX      Tinbfx                0.200   drs_dpram_Mmux_O_D_RD_A_5_f561
+                                                       drs_dpram_Mmux_O_D_RD_A_4_f6_29
+    SLICE_X34Y29.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_4_f630
+    SLICE_X34Y29.Y       Tif6y                 0.342   locbus_d_rd(8)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_29
+    SLICE_X29Y36.F2      net (fanout=1)        1.925   locbus_d_rd(8)
+    SLICE_X29Y36.X       Tilo                  0.551   usb2_racc_interface_uc_data_o_mux0004(8)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(8)39
+    SLICE_X29Y56.F2      net (fanout=1)        1.335   usb2_racc_interface_uc_data_o_mux0004(8)39
+    SLICE_X29Y56.CLK     Tfck                  0.633   usb2_racc_interface_uc_data_o(8)
+                                                       usb2_racc_interface_uc_data_o_mux0004(8)41
+                                                       usb2_racc_interface_uc_data_o_8
+    -------------------------------------------------  ---------------------------
+    Total                                     13.839ns (4.859ns logic, 8.980ns route)
+                                                       (35.1% logic, 64.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  3.447ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[0].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_8 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      12.502ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.001ns (1.823 - 1.824)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[0].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y7.DOA8     Tbcko                 2.394   drs_dpram_dpram_gen[0].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[0].ramb16_s36_s36_inst.A
+    SLICE_X35Y29.G2      net (fanout=1)        4.383   drs_dpram_block_do_a(0)(8)
+    SLICE_X35Y29.F5      Tif5                  0.739   drs_dpram_Mmux_O_D_RD_A_6_f530
+                                                       drs_dpram_Mmux_O_D_RD_A_830
+                                                       drs_dpram_Mmux_O_D_RD_A_6_f5_29
+    SLICE_X35Y28.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_6_f530
+    SLICE_X35Y28.FX      Tinbfx                0.200   drs_dpram_Mmux_O_D_RD_A_5_f561
+                                                       drs_dpram_Mmux_O_D_RD_A_4_f6_29
+    SLICE_X34Y29.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_4_f630
+    SLICE_X34Y29.Y       Tif6y                 0.342   locbus_d_rd(8)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_29
+    SLICE_X29Y36.F2      net (fanout=1)        1.925   locbus_d_rd(8)
+    SLICE_X29Y36.X       Tilo                  0.551   usb2_racc_interface_uc_data_o_mux0004(8)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(8)39
+    SLICE_X29Y56.F2      net (fanout=1)        1.335   usb2_racc_interface_uc_data_o_mux0004(8)39
+    SLICE_X29Y56.CLK     Tfck                  0.633   usb2_racc_interface_uc_data_o(8)
+                                                       usb2_racc_interface_uc_data_o_mux0004(8)41
+                                                       usb2_racc_interface_uc_data_o_8
+    -------------------------------------------------  ---------------------------
+    Total                                     12.502ns (4.859ns logic, 7.643ns route)
+                                                       (38.9% logic, 61.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.388ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[9].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_8 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      11.561ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.001ns (1.823 - 1.824)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[9].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y1.DOA24    Tbcko                 2.394   drs_dpram_dpram_gen[9].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[9].ramb16_s36_s36_inst.A
+    SLICE_X32Y37.G1      net (fanout=1)        4.582   drs_dpram_block_do_a(9)(24)
+    SLICE_X32Y37.F5      Tif5                  0.796   locbus_d_rd(24)
+                                                       drs_dpram_Mmux_O_D_RD_A_751
+                                                       drs_dpram_Mmux_O_D_RD_A_5_f5_33
+    SLICE_X32Y36.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_5_f534
+    SLICE_X32Y36.FX      Tinbfx                0.200   drs_dpram_Mmux_O_D_RD_A_4_f517
+                                                       drs_dpram_Mmux_O_D_RD_A_3_f6_16
+    SLICE_X32Y37.FXINA   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_3_f617
+    SLICE_X32Y37.Y       Tif6y                 0.342   locbus_d_rd(24)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_16
+    SLICE_X29Y36.F3      net (fanout=1)        0.728   locbus_d_rd(24)
+    SLICE_X29Y36.X       Tilo                  0.551   usb2_racc_interface_uc_data_o_mux0004(8)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(8)39
+    SLICE_X29Y56.F2      net (fanout=1)        1.335   usb2_racc_interface_uc_data_o_mux0004(8)39
+    SLICE_X29Y56.CLK     Tfck                  0.633   usb2_racc_interface_uc_data_o(8)
+                                                       usb2_racc_interface_uc_data_o_mux0004(8)41
+                                                       usb2_racc_interface_uc_data_o_8
+    -------------------------------------------------  ---------------------------
+    Total                                     11.561ns (4.916ns logic, 6.645ns route)
+                                                       (42.5% logic, 57.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point usb2_racc_interface_uc_data_o_1 (SLICE_X22Y39.F2), 64 paths
+--------------------------------------------------------------------------------
+Slack:                  2.289ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[2].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      13.660ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.001ns (1.804 - 1.805)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[2].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y2.DOA17    Tbcko                 2.394   drs_dpram_dpram_gen[2].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[2].ramb16_s36_s36_inst.A
+    SLICE_X33Y23.F2      net (fanout=1)        5.836   drs_dpram_block_do_a(2)(17)
+    SLICE_X33Y23.F5      Tif5                  0.739   drs_dpram_Mmux_O_D_RD_A_6_f59
+                                                       drs_dpram_Mmux_O_D_RD_A_729
+                                                       drs_dpram_Mmux_O_D_RD_A_6_f5_8
+    SLICE_X33Y22.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_6_f59
+    SLICE_X33Y22.FX      Tinbfx                0.200   drs_dpram_Mmux_O_D_RD_A_5_f519
+                                                       drs_dpram_Mmux_O_D_RD_A_4_f6_8
+    SLICE_X32Y23.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_4_f69
+    SLICE_X32Y23.Y       Tif6y                 0.342   locbus_d_rd(17)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_8
+    SLICE_X27Y32.G4      net (fanout=1)        1.936   locbus_d_rd(17)
+    SLICE_X27Y32.Y       Tilo                  0.551   usb2_racc_interface_uc_data_o_mux0004(10)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(1)39
+    SLICE_X22Y39.F2      net (fanout=1)        0.972   usb2_racc_interface_uc_data_o_mux0004(1)39
+    SLICE_X22Y39.CLK     Tfck                  0.690   usb2_racc_interface_uc_data_o(1)
+                                                       usb2_racc_interface_uc_data_o_mux0004(1)41
+                                                       usb2_racc_interface_uc_data_o_1
+    -------------------------------------------------  ---------------------------
+    Total                                     13.660ns (4.916ns logic, 8.744ns route)
+                                                       (36.0% logic, 64.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  2.950ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[7].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      12.980ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.020ns (1.804 - 1.824)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[7].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOA1     Tbcko                 2.394   drs_dpram_dpram_gen[7].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[7].ramb16_s36_s36_inst.A
+    SLICE_X33Y24.F4      net (fanout=1)        5.619   drs_dpram_block_do_a(7)(1)
+    SLICE_X33Y24.F5      Tif5                  0.739   drs_dpram_Mmux_O_D_RD_A_5_f53
+                                                       drs_dpram_Mmux_O_D_RD_A_65
+                                                       drs_dpram_Mmux_O_D_RD_A_5_f5_2
+    SLICE_X33Y24.FXINA   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_5_f53
+    SLICE_X33Y24.FX      Tinafx                0.200   drs_dpram_Mmux_O_D_RD_A_5_f53
+                                                       drs_dpram_Mmux_O_D_RD_A_4_f6_0
+    SLICE_X32Y25.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_4_f61
+    SLICE_X32Y25.Y       Tif6y                 0.342   locbus_d_rd(1)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_0
+    SLICE_X27Y32.G1      net (fanout=1)        1.473   locbus_d_rd(1)
+    SLICE_X27Y32.Y       Tilo                  0.551   usb2_racc_interface_uc_data_o_mux0004(10)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(1)39
+    SLICE_X22Y39.F2      net (fanout=1)        0.972   usb2_racc_interface_uc_data_o_mux0004(1)39
+    SLICE_X22Y39.CLK     Tfck                  0.690   usb2_racc_interface_uc_data_o(1)
+                                                       usb2_racc_interface_uc_data_o_mux0004(1)41
+                                                       usb2_racc_interface_uc_data_o_1
+    -------------------------------------------------  ---------------------------
+    Total                                     12.980ns (4.916ns logic, 8.064ns route)
+                                                       (37.9% logic, 62.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  3.915ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[1].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_1 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      12.015ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.020ns (1.804 - 1.824)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[1].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y6.DOA17    Tbcko                 2.394   drs_dpram_dpram_gen[1].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[1].ramb16_s36_s36_inst.A
+    SLICE_X33Y23.G1      net (fanout=1)        4.191   drs_dpram_block_do_a(1)(17)
+    SLICE_X33Y23.F5      Tif5                  0.739   drs_dpram_Mmux_O_D_RD_A_6_f59
+                                                       drs_dpram_Mmux_O_D_RD_A_89
+                                                       drs_dpram_Mmux_O_D_RD_A_6_f5_8
+    SLICE_X33Y22.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_6_f59
+    SLICE_X33Y22.FX      Tinbfx                0.200   drs_dpram_Mmux_O_D_RD_A_5_f519
+                                                       drs_dpram_Mmux_O_D_RD_A_4_f6_8
+    SLICE_X32Y23.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_4_f69
+    SLICE_X32Y23.Y       Tif6y                 0.342   locbus_d_rd(17)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_8
+    SLICE_X27Y32.G4      net (fanout=1)        1.936   locbus_d_rd(17)
+    SLICE_X27Y32.Y       Tilo                  0.551   usb2_racc_interface_uc_data_o_mux0004(10)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(1)39
+    SLICE_X22Y39.F2      net (fanout=1)        0.972   usb2_racc_interface_uc_data_o_mux0004(1)39
+    SLICE_X22Y39.CLK     Tfck                  0.690   usb2_racc_interface_uc_data_o(1)
+                                                       usb2_racc_interface_uc_data_o_mux0004(1)41
+                                                       usb2_racc_interface_uc_data_o_1
+    -------------------------------------------------  ---------------------------
+    Total                                     12.015ns (4.916ns logic, 7.099ns route)
+                                                       (40.9% logic, 59.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point usb2_racc_interface_uc_data_o_2 (SLICE_X22Y34.F3), 64 paths
+--------------------------------------------------------------------------------
+Slack:                  2.367ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[12].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_2 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      13.563ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.020ns (1.804 - 1.824)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[12].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y6.DOA18    Tbcko                 2.394   drs_dpram_dpram_gen[12].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[12].ramb16_s36_s36_inst.A
+    SLICE_X26Y16.G2      net (fanout=1)        4.909   drs_dpram_block_do_a(12)(18)
+    SLICE_X26Y16.F5      Tif5                  0.796   drs_dpram_Mmux_O_D_RD_A_4_f510
+                                                       drs_dpram_Mmux_O_D_RD_A_630
+                                                       drs_dpram_Mmux_O_D_RD_A_4_f5_9
+    SLICE_X26Y16.FXINA   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_4_f510
+    SLICE_X26Y16.FX      Tinafx                0.200   drs_dpram_Mmux_O_D_RD_A_4_f510
+                                                       drs_dpram_Mmux_O_D_RD_A_3_f6_9
+    SLICE_X26Y17.FXINA   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_3_f610
+    SLICE_X26Y17.Y       Tif6y                 0.342   locbus_d_rd(18)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_9
+    SLICE_X26Y32.G1      net (fanout=1)        2.903   locbus_d_rd(18)
+    SLICE_X26Y32.Y       Tilo                  0.608   usb2_racc_interface_uc_data_o_mux0004(11)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(2)39
+    SLICE_X22Y34.F3      net (fanout=1)        0.721   usb2_racc_interface_uc_data_o_mux0004(2)39
+    SLICE_X22Y34.CLK     Tfck                  0.690   usb2_racc_interface_uc_data_o(2)
+                                                       usb2_racc_interface_uc_data_o_mux0004(2)41
+                                                       usb2_racc_interface_uc_data_o_2
+    -------------------------------------------------  ---------------------------
+    Total                                     13.563ns (5.030ns logic, 8.533ns route)
+                                                       (37.1% logic, 62.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  3.483ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[13].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_2 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      12.447ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.020ns (1.804 - 1.824)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[13].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y7.DOA18    Tbcko                 2.394   drs_dpram_dpram_gen[13].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[13].ramb16_s36_s36_inst.A
+    SLICE_X26Y16.G3      net (fanout=1)        3.793   drs_dpram_block_do_a(13)(18)
+    SLICE_X26Y16.F5      Tif5                  0.796   drs_dpram_Mmux_O_D_RD_A_4_f510
+                                                       drs_dpram_Mmux_O_D_RD_A_630
+                                                       drs_dpram_Mmux_O_D_RD_A_4_f5_9
+    SLICE_X26Y16.FXINA   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_4_f510
+    SLICE_X26Y16.FX      Tinafx                0.200   drs_dpram_Mmux_O_D_RD_A_4_f510
+                                                       drs_dpram_Mmux_O_D_RD_A_3_f6_9
+    SLICE_X26Y17.FXINA   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_3_f610
+    SLICE_X26Y17.Y       Tif6y                 0.342   locbus_d_rd(18)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_9
+    SLICE_X26Y32.G1      net (fanout=1)        2.903   locbus_d_rd(18)
+    SLICE_X26Y32.Y       Tilo                  0.608   usb2_racc_interface_uc_data_o_mux0004(11)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(2)39
+    SLICE_X22Y34.F3      net (fanout=1)        0.721   usb2_racc_interface_uc_data_o_mux0004(2)39
+    SLICE_X22Y34.CLK     Tfck                  0.690   usb2_racc_interface_uc_data_o(2)
+                                                       usb2_racc_interface_uc_data_o_mux0004(2)41
+                                                       usb2_racc_interface_uc_data_o_2
+    -------------------------------------------------  ---------------------------
+    Total                                     12.447ns (5.030ns logic, 7.417ns route)
+                                                       (40.4% logic, 59.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  3.551ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               drs_dpram_dpram_gen[0].ramb16_s36_s36_inst.A (RAM)
+  Destination:          usb2_racc_interface_uc_data_o_2 (FF)
+  Requirement:          16.000ns
+  Data Path Delay:      12.379ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.020ns (1.804 - 1.824)
+  Source Clock:         drs_dpram/I_CLK_A rising at 16.000ns
+  Destination Clock:    drs_dpram/I_CLK_B rising at 32.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: drs_dpram_dpram_gen[0].ramb16_s36_s36_inst.A to usb2_racc_interface_uc_data_o_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y7.DOA18    Tbcko                 2.394   drs_dpram_dpram_gen[0].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[0].ramb16_s36_s36_inst.A
+    SLICE_X27Y17.G3      net (fanout=1)        3.782   drs_dpram_block_do_a(0)(18)
+    SLICE_X27Y17.F5      Tif5                  0.739   drs_dpram_Mmux_O_D_RD_A_6_f510
+                                                       drs_dpram_Mmux_O_D_RD_A_810
+                                                       drs_dpram_Mmux_O_D_RD_A_6_f5_9
+    SLICE_X27Y16.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_6_f510
+    SLICE_X27Y16.FX      Tinbfx                0.200   drs_dpram_Mmux_O_D_RD_A_5_f521
+                                                       drs_dpram_Mmux_O_D_RD_A_4_f6_9
+    SLICE_X26Y17.FXINB   net (fanout=1)        0.000   drs_dpram_Mmux_O_D_RD_A_4_f610
+    SLICE_X26Y17.Y       Tif6y                 0.342   locbus_d_rd(18)
+                                                       drs_dpram_Mmux_O_D_RD_A_2_f7_9
+    SLICE_X26Y32.G1      net (fanout=1)        2.903   locbus_d_rd(18)
+    SLICE_X26Y32.Y       Tilo                  0.608   usb2_racc_interface_uc_data_o_mux0004(11)39
+                                                       usb2_racc_interface_uc_data_o_mux0004(2)39
+    SLICE_X22Y34.F3      net (fanout=1)        0.721   usb2_racc_interface_uc_data_o_mux0004(2)39
+    SLICE_X22Y34.CLK     Tfck                  0.690   usb2_racc_interface_uc_data_o(2)
+                                                       usb2_racc_interface_uc_data_o_mux0004(2)41
+                                                       usb2_racc_interface_uc_data_o_2
+    -------------------------------------------------  ---------------------------
+    Total                                     12.379ns (4.973ns logic, 7.406ns route)
+                                                       (40.2% logic, 59.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clocks_clk33_tmp = PERIOD TIMEGRP "clocks_clk33_tmp" TS_P_I_CLK33 HIGH 50%
+        INPUT_JITTER 0.1 ns;
+--------------------------------------------------------------------------------
+Slack: 29.268ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 32.000ns
+  Low pulse: 16.000ns
+  Low pulse limit: 1.366ns (Tbpwl)
+  Physical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst/CLKB
+  Logical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst.B/CLKB
+  Location pin: RAMB16_X0Y4.CLKB
+  Clock network: drs_dpram/I_CLK_B
+--------------------------------------------------------------------------------
+Slack: 29.268ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 32.000ns
+  High pulse: 16.000ns
+  High pulse limit: 1.366ns (Tbpwh)
+  Physical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst/CLKB
+  Logical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst.B/CLKB
+  Location pin: RAMB16_X0Y4.CLKB
+  Clock network: drs_dpram/I_CLK_B
+--------------------------------------------------------------------------------
+Slack: 29.268ns (period - min period limit)
+  Period: 32.000ns
+  Min period limit: 2.732ns (366.032MHz) (Tbp)
+  Physical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst/CLKB
+  Logical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst.B/CLKB
+  Location pin: RAMB16_X0Y4.CLKB
+  Clock network: drs_dpram/I_CLK_B
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clocks_clk66_dcm1_tmp = PERIOD TIMEGRP 
+"clocks_clk66_dcm1_tmp" TS_P_I_CLK33         / 2 HIGH 50% INPUT_JITTER 0.1 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1265 paths analyzed, 743 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  12.941ns.
+--------------------------------------------------------------------------------
+
+Paths for end point drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A (RAMB16_X1Y0.WEA), 5 paths
+--------------------------------------------------------------------------------
+Slack:                  3.059ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_O_LOCBUS_ADDR_14 (FF)
+  Destination:          drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      12.891ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    drs_dpram/I_CLK_A rising at 16.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_O_LOCBUS_ADDR_14 to drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y46.YQ      Tcko                  0.720   usb2_racc_interface_locbus_addr(14)
+                                                       usb2_racc_interface_O_LOCBUS_ADDR_14
+    SLICE_X22Y14.G2      net (fanout=36)       4.523   usb2_racc_interface_O_LOCBUS_ADDR(14)
+    SLICE_X22Y14.Y       Tilo                  0.608   drs_dpram_block_we_a(7)
+                                                       drs_dpram_block_we_a_4_mux000011
+    SLICE_X42Y23.G4      net (fanout=4)        3.398   drs_dpram_N9
+    SLICE_X42Y23.Y       Tilo                  0.608   drs_dpram_block_we_a(5)
+                                                       drs_dpram_block_we_a_4_mux00001
+    RAMB16_X1Y0.WEA      net (fanout=1)        2.549   drs_dpram_block_we_a(4)
+    RAMB16_X1Y0.CLKA     Tbwck                 0.485   drs_dpram_dpram_gen[4].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A
+    -------------------------------------------------  ---------------------------
+    Total                                     12.891ns (2.421ns logic, 10.470ns route)
+                                                       (18.8% logic, 81.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  4.762ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_O_LOCBUS_ADDR_13 (FF)
+  Destination:          drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      11.188ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    drs_dpram/I_CLK_A rising at 16.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_O_LOCBUS_ADDR_13 to drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y40.XQ      Tcko                  0.720   usb2_racc_interface_O_LOCBUS_ADDR(13)
+                                                       usb2_racc_interface_O_LOCBUS_ADDR_13
+    SLICE_X22Y14.G4      net (fanout=71)       2.820   usb2_racc_interface_O_LOCBUS_ADDR(13)
+    SLICE_X22Y14.Y       Tilo                  0.608   drs_dpram_block_we_a(7)
+                                                       drs_dpram_block_we_a_4_mux000011
+    SLICE_X42Y23.G4      net (fanout=4)        3.398   drs_dpram_N9
+    SLICE_X42Y23.Y       Tilo                  0.608   drs_dpram_block_we_a(5)
+                                                       drs_dpram_block_we_a_4_mux00001
+    RAMB16_X1Y0.WEA      net (fanout=1)        2.549   drs_dpram_block_we_a(4)
+    RAMB16_X1Y0.CLKA     Tbwck                 0.485   drs_dpram_dpram_gen[4].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A
+    -------------------------------------------------  ---------------------------
+    Total                                     11.188ns (2.421ns logic, 8.767ns route)
+                                                       (21.6% logic, 78.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  7.734ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_O_LOCBUS_ADDR_12 (FF)
+  Destination:          drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      8.216ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    drs_dpram/I_CLK_A rising at 16.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_O_LOCBUS_ADDR_12 to drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y40.YQ      Tcko                  0.720   usb2_racc_interface_O_LOCBUS_ADDR(13)
+                                                       usb2_racc_interface_O_LOCBUS_ADDR_12
+    SLICE_X42Y23.G1      net (fanout=144)      3.854   usb2_racc_interface_O_LOCBUS_ADDR(12)
+    SLICE_X42Y23.Y       Tilo                  0.608   drs_dpram_block_we_a(5)
+                                                       drs_dpram_block_we_a_4_mux00001
+    RAMB16_X1Y0.WEA      net (fanout=1)        2.549   drs_dpram_block_we_a(4)
+    RAMB16_X1Y0.CLKA     Tbwck                 0.485   drs_dpram_dpram_gen[4].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A
+    -------------------------------------------------  ---------------------------
+    Total                                      8.216ns (1.813ns logic, 6.403ns route)
+                                                       (22.1% logic, 77.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A (RAMB16_X1Y0.ADDRA6), 1 path
+--------------------------------------------------------------------------------
+Slack:                  4.143ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_O_LOCBUS_ADDR_3 (FF)
+  Destination:          drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      11.807ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    drs_dpram/I_CLK_A rising at 16.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_O_LOCBUS_ADDR_3 to drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y5.XQ       Tcko                  0.720   usb2_racc_interface_O_LOCBUS_ADDR(3)
+                                                       usb2_racc_interface_O_LOCBUS_ADDR_3
+    RAMB16_X1Y0.ADDRA6   net (fanout=16)      10.737   usb2_racc_interface_O_LOCBUS_ADDR(3)
+    RAMB16_X1Y0.CLKA     Tback                 0.350   drs_dpram_dpram_gen[4].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[4].ramb16_s36_s36_inst.A
+    -------------------------------------------------  ---------------------------
+    Total                                     11.807ns (1.070ns logic, 10.737ns route)
+                                                       (9.1% logic, 90.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A (RAMB16_X1Y2.WEA), 5 paths
+--------------------------------------------------------------------------------
+Slack:                  4.241ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_O_LOCBUS_ADDR_14 (FF)
+  Destination:          drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      11.709ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    drs_dpram/I_CLK_A rising at 16.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_O_LOCBUS_ADDR_14 to drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X25Y46.YQ      Tcko                  0.720   usb2_racc_interface_locbus_addr(14)
+                                                       usb2_racc_interface_O_LOCBUS_ADDR_14
+    SLICE_X22Y14.G2      net (fanout=36)       4.523   usb2_racc_interface_O_LOCBUS_ADDR(14)
+    SLICE_X22Y14.Y       Tilo                  0.608   drs_dpram_block_we_a(7)
+                                                       drs_dpram_block_we_a_4_mux000011
+    SLICE_X42Y23.F4      net (fanout=4)        3.307   drs_dpram_N9
+    SLICE_X42Y23.X       Tilo                  0.608   drs_dpram_block_we_a(5)
+                                                       drs_dpram_block_we_a_5_mux00001
+    RAMB16_X1Y2.WEA      net (fanout=1)        1.458   drs_dpram_block_we_a(5)
+    RAMB16_X1Y2.CLKA     Tbwck                 0.485   drs_dpram_dpram_gen[5].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A
+    -------------------------------------------------  ---------------------------
+    Total                                     11.709ns (2.421ns logic, 9.288ns route)
+                                                       (20.7% logic, 79.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  5.944ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_O_LOCBUS_ADDR_13 (FF)
+  Destination:          drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      10.006ns (Levels of Logic = 2)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    drs_dpram/I_CLK_A rising at 16.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_O_LOCBUS_ADDR_13 to drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y40.XQ      Tcko                  0.720   usb2_racc_interface_O_LOCBUS_ADDR(13)
+                                                       usb2_racc_interface_O_LOCBUS_ADDR_13
+    SLICE_X22Y14.G4      net (fanout=71)       2.820   usb2_racc_interface_O_LOCBUS_ADDR(13)
+    SLICE_X22Y14.Y       Tilo                  0.608   drs_dpram_block_we_a(7)
+                                                       drs_dpram_block_we_a_4_mux000011
+    SLICE_X42Y23.F4      net (fanout=4)        3.307   drs_dpram_N9
+    SLICE_X42Y23.X       Tilo                  0.608   drs_dpram_block_we_a(5)
+                                                       drs_dpram_block_we_a_5_mux00001
+    RAMB16_X1Y2.WEA      net (fanout=1)        1.458   drs_dpram_block_we_a(5)
+    RAMB16_X1Y2.CLKA     Tbwck                 0.485   drs_dpram_dpram_gen[5].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A
+    -------------------------------------------------  ---------------------------
+    Total                                     10.006ns (2.421ns logic, 7.585ns route)
+                                                       (24.2% logic, 75.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  8.840ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               usb2_racc_interface_O_LOCBUS_ADDR_12 (FF)
+  Destination:          drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A (RAM)
+  Requirement:          16.000ns
+  Data Path Delay:      7.110ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Destination Clock:    drs_dpram/I_CLK_A rising at 16.000ns
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: usb2_racc_interface_O_LOCBUS_ADDR_12 to drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y40.YQ      Tcko                  0.720   usb2_racc_interface_O_LOCBUS_ADDR(13)
+                                                       usb2_racc_interface_O_LOCBUS_ADDR_12
+    SLICE_X42Y23.F1      net (fanout=144)      3.839   usb2_racc_interface_O_LOCBUS_ADDR(12)
+    SLICE_X42Y23.X       Tilo                  0.608   drs_dpram_block_we_a(5)
+                                                       drs_dpram_block_we_a_5_mux00001
+    RAMB16_X1Y2.WEA      net (fanout=1)        1.458   drs_dpram_block_we_a(5)
+    RAMB16_X1Y2.CLKA     Tbwck                 0.485   drs_dpram_dpram_gen[5].ramb16_s36_s36_inst
+                                                       drs_dpram_dpram_gen[5].ramb16_s36_s36_inst.A
+    -------------------------------------------------  ---------------------------
+    Total                                      7.110ns (1.813ns logic, 5.297ns route)
+                                                       (25.5% logic, 74.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clocks_clk66_dcm1_tmp = PERIOD TIMEGRP "clocks_clk66_dcm1_tmp" TS_P_I_CLK33
+        / 2 HIGH 50% INPUT_JITTER 0.1 ns;
+--------------------------------------------------------------------------------
+Slack: 13.268ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 16.000ns
+  Low pulse: 8.000ns
+  Low pulse limit: 1.366ns (Tbpwl)
+  Physical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst/CLKA
+  Logical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst.A/CLKA
+  Location pin: RAMB16_X0Y4.CLKA
+  Clock network: drs_dpram/I_CLK_A
+--------------------------------------------------------------------------------
+Slack: 13.268ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 16.000ns
+  High pulse: 8.000ns
+  High pulse limit: 1.366ns (Tbpwh)
+  Physical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst/CLKA
+  Logical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst.A/CLKA
+  Location pin: RAMB16_X0Y4.CLKA
+  Clock network: drs_dpram/I_CLK_A
+--------------------------------------------------------------------------------
+Slack: 13.268ns (period - min period limit)
+  Period: 16.000ns
+  Min period limit: 2.732ns (366.032MHz) (Tbp)
+  Physical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst/CLKA
+  Logical resource: drs_dpram_dpram_gen[8].ramb16_s36_s36_inst.A/CLKA
+  Location pin: RAMB16_X0Y4.CLKA
+  Clock network: drs_dpram/I_CLK_A
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "P_I_PADS" OFFSET = IN 20 ns BEFORE COMP 
+"P_I_CLK33";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 4 paths analyzed, 4 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.927ns.
+--------------------------------------------------------------------------------
+
+Paths for end point global_reset_3 (SLICE_X30Y50.BY), 1 path
+--------------------------------------------------------------------------------
+Slack:                  19.073ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               P_I_UC_PA0 (PAD)
+  Destination:          global_reset_3 (FF)
+  Destination Clock:    clk33_nodll rising at 0.000ns
+  Requirement:          20.000ns
+  Data Path Delay:      5.944ns (Levels of Logic = 1)
+  Clock Path Delay:     5.067ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: P_I_UC_PA0 to global_reset_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P20.I                Tiopi                 1.918   P_I_UC_PA0
+                                                       P_I_UC_PA0
+                                                       P_I_UC_PA0_IBUF
+    SLICE_X30Y50.BY      net (fanout=4)        3.765   P_I_UC_PA0_IBUF
+    SLICE_X30Y50.CLK     Tdick                 0.261   global_reset_3
+                                                       global_reset_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.944ns (2.179ns logic, 3.765ns route)
+                                                       (36.7% logic, 63.3% route)
+
+  Minimum Clock Path: P_I_CLK33 to global_reset_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.530   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        2.658   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    SLICE_X30Y50.CLK     net (fanout=6)        0.878   clk33_nodll
+    -------------------------------------------------  ---------------------------
+    Total                                      5.067ns (1.531ns logic, 3.536ns route)
+                                                       (30.2% logic, 69.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point global_reset (SLICE_X32Y54.BY), 1 path
+--------------------------------------------------------------------------------
+Slack:                  19.077ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               P_I_UC_PA0 (PAD)
+  Destination:          global_reset (FF)
+  Destination Clock:    clk33_nodll rising at 0.000ns
+  Requirement:          20.000ns
+  Data Path Delay:      5.940ns (Levels of Logic = 1)
+  Clock Path Delay:     5.067ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: P_I_UC_PA0 to global_reset
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P20.I                Tiopi                 1.918   P_I_UC_PA0
+                                                       P_I_UC_PA0
+                                                       P_I_UC_PA0_IBUF
+    SLICE_X32Y54.BY      net (fanout=4)        3.761   P_I_UC_PA0_IBUF
+    SLICE_X32Y54.CLK     Tdick                 0.261   global_reset
+                                                       global_reset
+    -------------------------------------------------  ---------------------------
+    Total                                      5.940ns (2.179ns logic, 3.761ns route)
+                                                       (36.7% logic, 63.3% route)
+
+  Minimum Clock Path: P_I_CLK33 to global_reset
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.530   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        2.658   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    SLICE_X32Y54.CLK     net (fanout=6)        0.878   clk33_nodll
+    -------------------------------------------------  ---------------------------
+    Total                                      5.067ns (1.531ns logic, 3.536ns route)
+                                                       (30.2% logic, 69.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point global_reset_1 (SLICE_X15Y30.BY), 1 path
+--------------------------------------------------------------------------------
+Slack:                  19.178ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               P_I_UC_PA0 (PAD)
+  Destination:          global_reset_1 (FF)
+  Destination Clock:    clk33_nodll rising at 0.000ns
+  Requirement:          20.000ns
+  Data Path Delay:      5.823ns (Levels of Logic = 1)
+  Clock Path Delay:     5.051ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: P_I_UC_PA0 to global_reset_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P20.I                Tiopi                 1.918   P_I_UC_PA0
+                                                       P_I_UC_PA0
+                                                       P_I_UC_PA0_IBUF
+    SLICE_X15Y30.BY      net (fanout=4)        3.644   P_I_UC_PA0_IBUF
+    SLICE_X15Y30.CLK     Tdick                 0.261   global_reset_1
+                                                       global_reset_1
+    -------------------------------------------------  ---------------------------
+    Total                                      5.823ns (2.179ns logic, 3.644ns route)
+                                                       (37.4% logic, 62.6% route)
+
+  Minimum Clock Path: P_I_CLK33 to global_reset_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.530   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        2.658   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    SLICE_X15Y30.CLK     net (fanout=6)        0.862   clk33_nodll
+    -------------------------------------------------  ---------------------------
+    Total                                      5.051ns (1.531ns logic, 3.520ns route)
+                                                       (30.3% logic, 69.7% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "P_IO_PADS" OFFSET = IN 20 ns BEFORE COMP 
+"P_I_CLK33";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 38 paths analyzed, 38 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   0.275ns.
+--------------------------------------------------------------------------------
+
+Paths for end point app_pmc_iofds_inst_bit_41_0_gen[41].FF2 (P92.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack:                  19.725ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               P_IO_PMC_USR(41) (PAD)
+  Destination:          app_pmc_iofds_inst_bit_41_0_gen[41].FF2 (FF)
+  Destination Clock:    drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          20.000ns
+  Data Path Delay:      5.316ns (Levels of Logic = 0)
+  Clock Path Delay:     5.091ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: P_IO_PMC_USR(41) to app_pmc_iofds_inst_bit_41_0_gen[41].FF2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P92.ICLK1            Tiopickd              5.316   P_IO_PMC_USR(41)
+                                                       P_IO_PMC_USR(41)
+                                                       app_pmc_iofds_inst_bit_41_0_gen[41].U1/IBUF
+                                                       P_IO_PMC_USR(41).DELAY
+                                                       app_pmc_iofds_inst_bit_41_0_gen[41].FF2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.316ns (5.316ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+  Minimum Clock Path: P_I_CLK33 to app_pmc_iofds_inst_bit_41_0_gen[41].FF2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.530   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        2.658   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.060   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -1.686   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.631   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    P92.ICLK1            net (fanout=913)      0.896   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      5.091ns (-0.154ns logic, 5.245ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point app_pmc_iofds_inst_bit_53_47_gen[4].FF2 (P90.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack:                  19.725ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               P_IO_PMC_USR(51) (PAD)
+  Destination:          app_pmc_iofds_inst_bit_53_47_gen[4].FF2 (FF)
+  Destination Clock:    drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          20.000ns
+  Data Path Delay:      5.316ns (Levels of Logic = 0)
+  Clock Path Delay:     5.091ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: P_IO_PMC_USR(51) to app_pmc_iofds_inst_bit_53_47_gen[4].FF2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P90.ICLK1            Tiopickd              5.316   P_IO_PMC_USR(51)
+                                                       P_IO_PMC_USR(51)
+                                                       app_pmc_iofds_inst_bit_53_47_gen[4].U1/IBUF
+                                                       P_IO_PMC_USR(51).DELAY
+                                                       app_pmc_iofds_inst_bit_53_47_gen[4].FF2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.316ns (5.316ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+  Minimum Clock Path: P_I_CLK33 to app_pmc_iofds_inst_bit_53_47_gen[4].FF2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.530   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        2.658   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.060   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -1.686   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.631   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    P90.ICLK1            net (fanout=913)      0.896   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      5.091ns (-0.154ns logic, 5.245ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point app_pmc_iofds_inst_bit_41_0_gen[30].FF2 (P80.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack:                  19.741ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               P_IO_PMC_USR(30) (PAD)
+  Destination:          app_pmc_iofds_inst_bit_41_0_gen[30].FF2 (FF)
+  Destination Clock:    drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          20.000ns
+  Data Path Delay:      5.316ns (Levels of Logic = 0)
+  Clock Path Delay:     5.107ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: P_IO_PMC_USR(30) to app_pmc_iofds_inst_bit_41_0_gen[30].FF2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P80.ICLK1            Tiopickd              5.316   P_IO_PMC_USR(30)
+                                                       P_IO_PMC_USR(30)
+                                                       app_pmc_iofds_inst_bit_41_0_gen[30].U1/IBUF
+                                                       P_IO_PMC_USR(30).DELAY
+                                                       app_pmc_iofds_inst_bit_41_0_gen[30].FF2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.316ns (5.316ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+  Minimum Clock Path: P_I_CLK33 to app_pmc_iofds_inst_bit_41_0_gen[30].FF2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.530   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        2.658   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.060   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -1.686   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.631   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    P80.ICLK1            net (fanout=913)      0.912   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      5.107ns (-0.154ns logic, 5.261ns route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "P_O_PADS" OFFSET = OUT 22 ns AFTER COMP 
+"P_I_CLK33";
+For more information, see Offset Out Analysis in the Timing Closure User Guide (UG612).
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is  14.994ns.
+--------------------------------------------------------------------------------
+
+Paths for end point P_O_TCA_CTRL (P53.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack:                  7.006ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(0)_19 (FF)
+  Destination:          P_O_TCA_CTRL (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      8.680ns (Levels of Logic = 1)
+  Clock Path Delay:     6.264ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_control_reg_arr(0)_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    SLICE_X17Y44.CLK     net (fanout=913)      1.015   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.264ns (-0.110ns logic, 6.374ns route)
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(0)_19 to P_O_TCA_CTRL
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y44.XQ      Tcko                  0.720   usb2_racc_interface_control_reg_arr(0)(19)
+                                                       usb2_racc_interface_control_reg_arr(0)_19
+    P53.O1               net (fanout=2)        3.157   usb2_racc_interface_control_reg_arr(0)(19)
+    P53.PAD              Tioop                 4.803   P_O_TCA_CTRL
+                                                       P_O_TCA_CTRL_OBUF
+                                                       P_O_TCA_CTRL
+    -------------------------------------------------  ---------------------------
+    Total                                      8.680ns (5.523ns logic, 3.157ns route)
+                                                       (63.6% logic, 36.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point P_O_CAL (P97.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack:                  7.587ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(0)_25 (FF)
+  Destination:          P_O_CAL (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      8.081ns (Levels of Logic = 1)
+  Clock Path Delay:     6.282ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_control_reg_arr(0)_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    SLICE_X32Y56.CLK     net (fanout=913)      1.033   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.282ns (-0.110ns logic, 6.392ns route)
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(0)_25 to P_O_CAL
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X32Y56.XQ      Tcko                  0.720   usb2_racc_interface_control_reg_arr(0)(25)
+                                                       usb2_racc_interface_control_reg_arr(0)_25
+    P97.O1               net (fanout=2)        2.999   usb2_racc_interface_control_reg_arr(0)(25)
+    P97.PAD              Tioop                 4.362   P_O_CAL
+                                                       P_O_CAL_OBUF
+                                                       P_O_CAL
+    -------------------------------------------------  ---------------------------
+    Total                                      8.081ns (5.082ns logic, 2.999ns route)
+                                                       (62.9% logic, 37.1% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "P_IO_PADS" OFFSET = OUT 22 ns AFTER COMP 
+"P_I_CLK33";
+For more information, see Offset Out Analysis in the Timing Closure User Guide (UG612).
+
+ 105 paths analyzed, 42 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is  17.893ns.
+--------------------------------------------------------------------------------
+
+Paths for end point P_IO_ETRG_OUT (P104.PAD), 32 paths
+--------------------------------------------------------------------------------
+Slack:                  4.107ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(7)_28 (FF)
+  Destination:          P_IO_ETRG_OUT (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      11.560ns (Levels of Logic = 6)
+  Clock Path Delay:     6.283ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_control_reg_arr(7)_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    SLICE_X14Y59.CLK     net (fanout=913)      1.034   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.283ns (-0.110ns logic, 6.393ns route)
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(7)_28 to P_IO_ETRG_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y59.YQ      Tcko                  0.720   usb2_racc_interface_control_reg_arr(7)(29)
+                                                       usb2_racc_interface_control_reg_arr(7)_28
+    SLICE_X33Y55.F2      net (fanout=3)        2.632   usb2_racc_interface_control_reg_arr(7)(28)
+    SLICE_X33Y55.X       Tilo                  0.551   N2
+                                                       app_drs_hard_and11
+    SLICE_X34Y55.G2      net (fanout=2)        0.588   N2
+    SLICE_X34Y55.Y       Tilo                  0.608   app_IO_ETRG_OUT1178
+                                                       app_IO_ETRG_OUT1178_SW0
+    SLICE_X34Y55.F4      net (fanout=1)        0.360   N585
+    SLICE_X34Y55.X       Tilo                  0.608   app_IO_ETRG_OUT1178
+                                                       app_IO_ETRG_OUT1178
+    SLICE_X34Y54.G2      net (fanout=1)        0.262   app_IO_ETRG_OUT1178
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X38Y50.F1      net (fanout=2)        0.931   N163
+    SLICE_X38Y50.X       Tilo                  0.608   app_drs_trg_delay(0)
+                                                       app_IO_ETRG_OUT2
+    P104.O1              net (fanout=1)        1.624   P_IO_ETRG_OUT_OBUF
+    P104.PAD             Tioop                 1.460   P_IO_ETRG_OUT
+                                                       P_IO_ETRG_OUT_OBUF
+                                                       P_IO_ETRG_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     11.560ns (5.163ns logic, 6.397ns route)
+                                                       (44.7% logic, 55.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  5.036ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(7)_26 (FF)
+  Destination:          P_IO_ETRG_OUT (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      10.632ns (Levels of Logic = 5)
+  Clock Path Delay:     6.282ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_control_reg_arr(7)_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    SLICE_X31Y55.CLK     net (fanout=913)      1.033   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.282ns (-0.110ns logic, 6.392ns route)
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(7)_26 to P_IO_ETRG_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y55.YQ      Tcko                  0.720   usb2_racc_interface_control_reg_arr(7)(27)
+                                                       usb2_racc_interface_control_reg_arr(7)_26
+    SLICE_X33Y54.F1      net (fanout=4)        1.264   usb2_racc_interface_control_reg_arr(7)(26)
+    SLICE_X33Y54.X       Tilo                  0.551   usb2_racc_interface_control_reg_arr(7)(25)
+                                                       app_IO_ETRG_OUT148
+    SLICE_X32Y54.F1      net (fanout=1)        1.832   app_IO_ETRG_OUT148
+    SLICE_X32Y54.X       Tilo                  0.608   global_reset
+                                                       app_IO_ETRG_OUT1190_SW0
+    SLICE_X34Y54.G4      net (fanout=1)        0.426   N587
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X38Y50.F1      net (fanout=2)        0.931   N163
+    SLICE_X38Y50.X       Tilo                  0.608   app_drs_trg_delay(0)
+                                                       app_IO_ETRG_OUT2
+    P104.O1              net (fanout=1)        1.624   P_IO_ETRG_OUT_OBUF
+    P104.PAD             Tioop                 1.460   P_IO_ETRG_OUT
+                                                       P_IO_ETRG_OUT_OBUF
+                                                       P_IO_ETRG_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     10.632ns (4.555ns logic, 6.077ns route)
+                                                       (42.8% logic, 57.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  5.343ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_control_reg_arr(7)_28 (FF)
+  Destination:          P_IO_ETRG_OUT (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      10.324ns (Levels of Logic = 5)
+  Clock Path Delay:     6.283ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_control_reg_arr(7)_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    SLICE_X14Y59.CLK     net (fanout=913)      1.034   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.283ns (-0.110ns logic, 6.393ns route)
+
+  Maximum Data Path: usb2_racc_interface_control_reg_arr(7)_28 to P_IO_ETRG_OUT
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X14Y59.YQ      Tcko                  0.720   usb2_racc_interface_control_reg_arr(7)(29)
+                                                       usb2_racc_interface_control_reg_arr(7)_28
+    SLICE_X33Y55.F2      net (fanout=3)        2.632   usb2_racc_interface_control_reg_arr(7)(28)
+    SLICE_X33Y55.X       Tilo                  0.551   N2
+                                                       app_drs_hard_and11
+    SLICE_X35Y55.G3      net (fanout=2)        0.395   N2
+    SLICE_X35Y55.Y       Tilo                  0.551   app_drs_hard_inp(1)
+                                                       app_IO_ETRG_OUT1120
+    SLICE_X34Y54.G1      net (fanout=1)        0.244   app_IO_ETRG_OUT1120
+    SLICE_X34Y54.Y       Tilo                  0.608   app_drs_hard_trig
+                                                       app_IO_ETRG_OUT1190
+    SLICE_X38Y50.F1      net (fanout=2)        0.931   N163
+    SLICE_X38Y50.X       Tilo                  0.608   app_drs_trg_delay(0)
+                                                       app_IO_ETRG_OUT2
+    P104.O1              net (fanout=1)        1.624   P_IO_ETRG_OUT_OBUF
+    P104.PAD             Tioop                 1.460   P_IO_ETRG_OUT
+                                                       P_IO_ETRG_OUT_OBUF
+                                                       P_IO_ETRG_OUT
+    -------------------------------------------------  ---------------------------
+    Total                                     10.324ns (4.498ns logic, 5.826ns route)
+                                                       (43.6% logic, 56.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point P_IO_UC_FD(6) (P26.PAD), 2 paths
+--------------------------------------------------------------------------------
+Slack:                  4.272ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_uc_fdts (FF)
+  Destination:          P_IO_UC_FD(6) (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      11.395ns (Levels of Logic = 1)
+  Clock Path Delay:     6.283ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_uc_fdts
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    SLICE_X21Y48.CLK     net (fanout=913)      1.034   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.283ns (-0.110ns logic, 6.393ns route)
+
+  Maximum Data Path: usb2_racc_interface_uc_fdts to P_IO_UC_FD(6)
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y48.XQ      Tcko                  0.720   usb2_racc_interface_uc_fdts
+                                                       usb2_racc_interface_uc_fdts
+    P26.T1               net (fanout=16)       5.629   usb2_racc_interface_uc_fdts
+    P26.PAD              Tiotp                 5.046   P_IO_UC_FD(6)
+                                                       usb2_racc_interface_uc_iofds_inst_gen[6].U1/OBUFT
+                                                       P_IO_UC_FD(6)
+    -------------------------------------------------  ---------------------------
+    Total                                     11.395ns (5.766ns logic, 5.629ns route)
+                                                       (50.6% logic, 49.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.836ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_uc_iofds_inst_gen[6].FF1 (FF)
+  Destination:          P_IO_UC_FD(6) (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      4.810ns (Levels of Logic = 0)
+  Clock Path Delay:     6.304ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_uc_iofds_inst_gen[6].FF1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    P26.OTCLK1           net (fanout=913)      1.055   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.304ns (-0.110ns logic, 6.414ns route)
+
+  Maximum Data Path: usb2_racc_interface_uc_iofds_inst_gen[6].FF1 to P_IO_UC_FD(6)
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P26.PAD              Tiockp                4.810   P_IO_UC_FD(6)
+                                                       usb2_racc_interface_uc_iofds_inst_gen[6].FF1
+                                                       usb2_racc_interface_uc_iofds_inst_gen[6].U1/OBUFT
+                                                       P_IO_UC_FD(6)
+    -------------------------------------------------  ---------------------------
+    Total                                      4.810ns (4.810ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point P_IO_UC_FD(4) (P28.PAD), 2 paths
+--------------------------------------------------------------------------------
+Slack:                  4.606ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_uc_fdts (FF)
+  Destination:          P_IO_UC_FD(4) (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      11.061ns (Levels of Logic = 1)
+  Clock Path Delay:     6.283ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_uc_fdts
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    SLICE_X21Y48.CLK     net (fanout=913)      1.034   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.283ns (-0.110ns logic, 6.393ns route)
+
+  Maximum Data Path: usb2_racc_interface_uc_fdts to P_IO_UC_FD(4)
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y48.XQ      Tcko                  0.720   usb2_racc_interface_uc_fdts
+                                                       usb2_racc_interface_uc_fdts
+    P28.T1               net (fanout=16)       5.295   usb2_racc_interface_uc_fdts
+    P28.PAD              Tiotp                 5.046   P_IO_UC_FD(4)
+                                                       usb2_racc_interface_uc_iofds_inst_gen[4].U1/OBUFT
+                                                       P_IO_UC_FD(4)
+    -------------------------------------------------  ---------------------------
+    Total                                     11.061ns (5.766ns logic, 5.295ns route)
+                                                       (52.1% logic, 47.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  10.816ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               usb2_racc_interface_uc_iofds_inst_gen[4].FF1 (FF)
+  Destination:          P_IO_UC_FD(4) (PAD)
+  Source Clock:         drs_dpram/I_CLK_B rising at 0.000ns
+  Requirement:          22.000ns
+  Data Path Delay:      4.810ns (Levels of Logic = 0)
+  Clock Path Delay:     6.324ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.050ns
+
+  Clock Uncertainty:          0.050ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.000ns
+    Total Input Jitter (TIJ):   0.100ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Clock Path: P_I_CLK33 to usb2_racc_interface_uc_iofds_inst_gen[4].FF1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P40.I                Tiopi                 1.918   P_I_CLK33
+                                                       P_I_CLK33
+                                                       P_I_CLK33_IBUFG
+    BUFGMUX3.I0          net (fanout=9)        3.323   P_I_CLK33_IBUFG
+    BUFGMUX3.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_i
+                                                       clocks_inst_bufg_clk33_i.GCLKMUX
+                                                       clocks_inst_bufg_clk33_i
+    DCM_X0Y1.CLKIN       net (fanout=6)        1.247   clk33_nodll
+    DCM_X0Y1.CLK0        Tdcmino              -2.030   clocks_Inst_dcm1_clk132
+                                                       clocks_Inst_dcm1_clk132
+    BUFGMUX7.I0          net (fanout=1)        0.789   clocks_clk33_tmp
+    BUFGMUX7.O           Tgi0o                 0.001   clocks_inst_bufg_clk33_dcm1
+                                                       clocks_inst_bufg_clk33_dcm1.GCLKMUX
+                                                       clocks_inst_bufg_clk33_dcm1
+    P28.OTCLK1           net (fanout=913)      1.075   drs_dpram/I_CLK_B
+    -------------------------------------------------  ---------------------------
+    Total                                      6.324ns (-0.110ns logic, 6.434ns route)
+
+  Maximum Data Path: usb2_racc_interface_uc_iofds_inst_gen[4].FF1 to P_IO_UC_FD(4)
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P28.PAD              Tiockp                4.810   P_IO_UC_FD(4)
+                                                       usb2_racc_interface_uc_iofds_inst_gen[4].FF1
+                                                       usb2_racc_interface_uc_iofds_inst_gen[4].U1/OBUFT
+                                                       P_IO_UC_FD(4)
+    -------------------------------------------------  ---------------------------
+    Total                                      4.810ns (4.810ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_P_I_CLK33
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_P_I_CLK33                   |     32.000ns|     12.895ns|     27.780ns|            0|            0|         1688|        34942|
+| TS_clocks_clk33_tmp           |     32.000ns|     27.780ns|          N/A|            0|            0|        33677|            0|
+| TS_clocks_clk66_dcm1_tmp      |     16.000ns|     12.941ns|          N/A|            0|            0|         1265|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock P_I_CLK33
+----------------+------------+------------+------------------+--------+
+                |Max Setup to|Max Hold to |                  | Clock  |
+Source          | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+----------------+------------+------------+------------------+--------+
+P_IO_PMC_USR(0) |    0.237(R)|    3.058(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(2) |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(4) |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(6) |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(8) |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(10)|    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(12)|    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(14)|    0.237(R)|    3.058(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(16)|    0.237(R)|    3.058(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(18)|    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(20)|    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(22)|    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(24)|    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(26)|    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(30)|    0.259(R)|    3.036(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(31)|    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(33)|    0.239(R)|    3.056(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(41)|    0.275(R)|    3.017(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(51)|    0.275(R)|    3.017(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(53)|    0.259(R)|    3.036(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(0)   |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(1)   |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(2)   |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(3)   |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(4)   |    0.238(R)|    3.058(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(5)   |    0.238(R)|    3.058(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(6)   |    0.255(R)|    3.038(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(7)   |    0.255(R)|    3.038(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(8)   |    0.238(R)|    3.058(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(9)   |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(10)  |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(11)  |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(12)  |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(13)  |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(14)  |    0.238(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(15)  |    0.239(R)|    3.057(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FLAGB   |    0.255(R)|    3.037(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FLAGC   |    0.255(R)|    3.037(R)|drs_dpram/I_CLK_B |   0.000|
+P_I_J44         |    5.599(R)|   -1.806(R)|drs_dpram/I_CLK_B |   0.000|
+P_I_UC_PA0      |    0.927(R)|    2.098(R)|clk33_nodll       |   0.000|
+----------------+------------+------------+------------------+--------+
+
+Clock P_I_CLK33 to Pad
+----------------+------------+------------------+--------+
+                | clk (edge) |                  | Clock  |
+Destination     |   to PAD   |Internal Clock(s) | Phase  |
+----------------+------------+------------------+--------+
+P_IO_ECLK_OUT   |   13.543(R)|drs_dpram/I_CLK_A |   0.000|
+                |   14.076(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_ETRG_OUT   |   17.893(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(28)|   11.133(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(29)|   14.835(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(31)|   13.971(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(35)|   11.182(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(37)|   11.182(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(39)|   11.182(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(40)|   15.894(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(47)|   11.182(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(48)|   16.942(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(50)|   15.931(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(52)|   16.628(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(54)|   13.324(R)|drs_dpram/I_CLK_A |   0.000|
+                |   13.857(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(55)|   13.324(R)|drs_dpram/I_CLK_A |   0.000|
+                |   13.857(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(56)|   15.595(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(58)|   16.623(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(60)|   15.578(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_PMC_USR(62)|   16.754(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_T19        |   11.195(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_T20        |   11.005(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(0)   |   15.999(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(1)   |   16.673(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(2)   |   15.980(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(3)   |   17.389(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(4)   |   17.394(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(5)   |   15.626(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(6)   |   17.728(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(7)   |   15.619(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(8)   |   14.965(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(9)   |   15.746(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(10)  |   14.593(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(11)  |   16.080(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(12)  |   15.309(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(13)  |   16.028(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(14)  |   14.924(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FD(15)  |   15.301(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_FIFOADR1|   11.163(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_PKTEND  |   11.163(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_SLCS    |   11.184(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_SLOE    |   11.163(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_SLRD    |   11.182(R)|drs_dpram/I_CLK_B |   0.000|
+P_IO_UC_SLWR    |   11.182(R)|drs_dpram/I_CLK_B |   0.000|
+P_O_CAL         |   14.413(R)|drs_dpram/I_CLK_B |   0.000|
+P_O_LED_GREEN   |   14.699(R)|drs_dpram/I_CLK_B |   0.000|
+P_O_LED_YELLOW  |   14.007(R)|drs_dpram/I_CLK_B |   0.000|
+P_O_TCA_CTRL    |   14.994(R)|drs_dpram/I_CLK_B |   0.000|
+----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock P_I_CLK33
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+P_I_CLK33      |   16.827|         |         |         |
+---------------+---------+---------+---------+---------+
+
+TIMEGRP "P_O_PADS" OFFSET = OUT 22 ns AFTER COMP "P_I_CLK33";
+Bus Skew: 0.581 ns; 
+-----------------------------------------------+-------------+--------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+--------------+
+P_O_CAL                                        |       14.413|         0.000|
+P_O_TCA_CTRL                                   |       14.994|         0.581|
+-----------------------------------------------+-------------+--------------+
+
+TIMEGRP "P_IO_PADS" OFFSET = OUT 22 ns AFTER COMP "P_I_CLK33";
+Bus Skew: 6.888 ns; 
+-----------------------------------------------+-------------+--------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+--------------+
+P_IO_ECLK_OUT                                  |       14.076|         3.071|
+P_IO_ETRG_OUT                                  |       17.893|         6.888|
+P_IO_PMC_USR(29)                               |       14.835|         3.830|
+P_IO_PMC_USR(31)                               |       13.971|         2.966|
+P_IO_PMC_USR(35)                               |       11.182|         0.177|
+P_IO_PMC_USR(37)                               |       11.182|         0.177|
+P_IO_PMC_USR(39)                               |       11.182|         0.177|
+P_IO_PMC_USR(40)                               |       15.894|         4.889|
+P_IO_PMC_USR(47)                               |       11.182|         0.177|
+P_IO_PMC_USR(48)                               |       16.942|         5.937|
+P_IO_PMC_USR(50)                               |       15.931|         4.926|
+P_IO_PMC_USR(52)                               |       16.628|         5.623|
+P_IO_PMC_USR(54)                               |       13.857|         2.852|
+P_IO_PMC_USR(55)                               |       13.857|         2.852|
+P_IO_PMC_USR(56)                               |       15.595|         4.590|
+P_IO_PMC_USR(58)                               |       16.623|         5.618|
+P_IO_PMC_USR(60)                               |       15.578|         4.573|
+P_IO_PMC_USR(62)                               |       16.754|         5.749|
+P_IO_T19                                       |       11.195|         0.190|
+P_IO_T20                                       |       11.005|         0.000|
+P_IO_UC_FD(0)                                  |       15.999|         4.994|
+P_IO_UC_FD(1)                                  |       16.673|         5.668|
+P_IO_UC_FD(2)                                  |       15.980|         4.975|
+P_IO_UC_FD(3)                                  |       17.389|         6.384|
+P_IO_UC_FD(4)                                  |       17.394|         6.389|
+P_IO_UC_FD(5)                                  |       15.626|         4.621|
+P_IO_UC_FD(6)                                  |       17.728|         6.723|
+P_IO_UC_FD(7)                                  |       15.619|         4.614|
+P_IO_UC_FD(8)                                  |       14.965|         3.960|
+P_IO_UC_FD(9)                                  |       15.746|         4.741|
+P_IO_UC_FD(10)                                 |       14.593|         3.588|
+P_IO_UC_FD(11)                                 |       16.080|         5.075|
+P_IO_UC_FD(12)                                 |       15.309|         4.304|
+P_IO_UC_FD(13)                                 |       16.028|         5.023|
+P_IO_UC_FD(14)                                 |       14.924|         3.919|
+P_IO_UC_FD(15)                                 |       15.301|         4.296|
+P_IO_UC_FIFOADR1                               |       11.163|         0.158|
+P_IO_UC_PKTEND                                 |       11.163|         0.158|
+P_IO_UC_SLCS                                   |       11.184|         0.179|
+P_IO_UC_SLOE                                   |       11.163|         0.158|
+P_IO_UC_SLRD                                   |       11.182|         0.177|
+P_IO_UC_SLWR                                   |       11.182|         0.177|
+-----------------------------------------------+-------------+--------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 37745 paths, 0 nets, and 14634 connections
+
+Design statistics:
+   Minimum period:  27.780ns{1}   (Maximum frequency:  35.997MHz)
+   Minimum input required time before clock:   0.927ns
+   Minimum output required time after clock:  17.893ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Sep 15 05:18:16 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 217 MB
+
+
+

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="56" delta="old" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC &quot;TS_TIG_O_EXT&quot; = FROM &quot;FFS&quot; TO &quot;P_O_EXT_PADS&quot; TIG;&gt; [C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf(63)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TimeGrp&apos; or &apos;TNM&apos; or &apos;TPSync&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">P_O_EXT_PADS</arg>&apos;.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >TNM : P_I_PADS_ALL was distributed to a DCM but new TNM constraints were not derived. This TNM is used in the following user groups or specifications:
+&lt;TIMEGRP &quot;P_I_PADS&quot; = &quot;P_I_PADS_ALL&quot; EXCEPT &quot;P_I_CLK33_PAD&quot;;&gt; [C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf(30)]
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">P_I_CLK33</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_P_I_CLK33</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM</arg> instance <arg fmt="%s" index="5">clocks_Inst_dcm1_clk132</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM</arg> output(s): 
+<arg fmt="%s" index="7">CLK0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clocks_clk33_tmp = PERIOD &quot;clocks_clk33_tmp&quot; TS_P_I_CLK33 HIGH 50% INPUT_JITTER 100 ps&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">P_I_CLK33</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_P_I_CLK33</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM</arg> instance <arg fmt="%s" index="5">clocks_Inst_dcm1_clk132</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM</arg> output(s): 
+<arg fmt="%s" index="7">CLK2X</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clocks_clk66_dcm1_tmp = PERIOD &quot;clocks_clk66_dcm1_tmp&quot; TS_P_I_CLK33 / 2 HIGH 50% INPUT_JITTER 100 ps&gt;</arg>
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;TIMEGRP &quot;P_I_PADS&quot;       OFFSET = IN 20 ns BEFORE &quot;P_I_CLK33&quot;;&gt; [C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf(51)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;TIMEGRP &quot;P_IO_PADS&quot;      OFFSET = IN 20 ns BEFORE &quot;P_I_CLK33&quot;;&gt; [C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf(52)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_43_gen[0].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_56_gen[0].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_58_gen[0].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_60_gen[0].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_62_gen[0].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[40].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[39].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[38].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[37].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[36].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[35].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[34].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[32].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[29].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[28].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[27].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[25].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[23].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[21].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[19].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[17].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[15].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[13].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[11].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[9].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[7].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[5].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[3].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_41_0_gen[1].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_53_47_gen[5].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_53_47_gen[3].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_53_47_gen[2].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_53_47_gen[1].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">app_pmc_iofds_inst_bit_53_47_gen[0].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">usb2_racc_interface_uc_iofds_inst_gen[16].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">usb2_racc_interface_uc_iofds_inst_gen[17].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">usb2_racc_interface_uc_iofds_inst_gen[18].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">usb2_racc_interface_uc_iofds_inst_gen[19].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">usb2_racc_interface_uc_iofds_inst_gen[20].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">usb2_racc_interface_uc_iofds_inst_gen[21].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">usb2_racc_interface_uc_iofds_inst_gen[22].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="440" delta="old" >FF primitive &apos;<arg fmt="%s" index="1">usb2_racc_interface_uc_iofds_inst_gen[23].FF2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N1022</arg>&apos; has no driver
+</msg>
+
+</messages>
+

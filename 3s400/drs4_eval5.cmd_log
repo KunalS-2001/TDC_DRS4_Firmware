@@ -1,0 +1,170 @@
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "/home/kunal/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc /home/kunal/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+bitgen -intstyle ise -f drs4_eval5.ut drs4_eval5.ncd 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+bitgen -intstyle ise -f drs4_eval5.ut drs4_eval5.ncd 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+bitgen -intstyle ise -f drs4_eval5.ut drs4_eval5.ncd 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+bitgen -intstyle ise -f drs4_eval5.ut drs4_eval5.ncd 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+bitgen -intstyle ise -f drs4_eval5.ut drs4_eval5.ncd 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+bitgen -intstyle ise -f drs4_eval5.ut drs4_eval5.ncd 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+bitgen -intstyle ise -f drs4_eval5.ut drs4_eval5.ncd 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+xst -intstyle ise -ifn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.xst" -ofn "C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd  
+map -intstyle ise -p xc3s400-tq144-4 -cm area -ir off -pr off -c 100 -o drs4_eval5_map.ncd drs4_eval5.ngd drs4_eval5.pcf 
+par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd drs4_eval5.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -xml drs4_eval5.twx drs4_eval5.ncd -o drs4_eval5.twr drs4_eval5.pcf 
+bitgen -intstyle ise -f drs4_eval5.ut drs4_eval5.ncd 

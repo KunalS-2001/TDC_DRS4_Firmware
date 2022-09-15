@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;TIMEGRP &quot;P_I_PADS&quot; OFFSET = IN 20 ns BEFORE COMP &quot;P_I_CLK33&quot;;&gt; [drs4_eval5.pcf(1359)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;TIMEGRP &quot;P_IO_PADS&quot; OFFSET = IN 20 ns BEFORE COMP &quot;P_I_CLK33&quot;;&gt; [drs4_eval5.pcf(1360)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
+</msg>
+
+<msg type="info" file="Timing" num="3386" delta="old" >Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.</msg>
+
+<msg type="warning" file="Place" num="837" delta="old" >Partially locked IO Bus is found. 
+<arg fmt="%s" index="1"> Following components of the bus are not locked: 
+	 Comp: P_IO_PMC_USR(49)
+	 Comp: P_IO_PMC_USR(47)
+	 Comp: P_IO_PMC_USR(43)
+	 Comp: P_IO_PMC_USR(38)
+	 Comp: P_IO_PMC_USR(36)
+	 Comp: P_IO_PMC_USR(34)
+	 Comp: P_IO_PMC_USR(32)
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="old" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: P_IO_PMC_USR(0)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(2)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(4)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(6)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(8)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(10)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(12)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(14)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(16)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(18)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(20)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(22)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(24)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(26)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(28)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(29)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(30)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(31)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(32)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(33)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(34)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(35)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(36)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(37)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(38)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(39)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(40)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(41)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(42)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(43)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(47)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(48)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(49)   IOSTANDARD = LVCMOS33
+	 Comp: P_IO_PMC_USR(50)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(51)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(52)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(53)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(56)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(58)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(60)   IOSTANDARD = LVCMOS25
+	 Comp: P_IO_PMC_USR(62)   IOSTANDARD = LVCMOS25
+
+</arg>
+</msg>
+
+<msg type="info" file="Place" num="834" delta="old" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">89</arg> IOs, <arg fmt="%d" index="2">82</arg> are locked and <arg fmt="%d" index="3">7</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
+</msg>
+
+<msg type="warning" file="Place" num="414" delta="old" >The input design contains local clock signal(s). To get a better result, we recommend users run map with the &quot;-timing&quot; option set before starting the placement.
+</msg>
+
+<msg type="warning" file="Place" num="1019" delta="old" >A clock IOB / clock component pair have been found that are not placed at an optimal clock IOB / clock site pair. The clock component &lt;<arg fmt="%s" index="1">clocks_inst_bufg_clk33_i</arg>&gt; is placed at site &lt;<arg fmt="%s" index="2">BUFGMUX3</arg>&gt;. The IO component &lt;<arg fmt="%s" index="3">P_I_CLK33</arg>&gt; is placed at site &lt;<arg fmt="%s" index="4">P40</arg>&gt;.  This will not allow the use of the fast path between the IO and the Clock buffer. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN &lt;<arg fmt="%s" index="5">P_I_CLK33.PAD</arg>&gt; allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">P_I_ATRG1_IBUF</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">P_I_CLK33_IBUFG</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">8</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">P_I_ATRG2_IBUF</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">7</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">P_I_ATRG3_IBUF</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">2</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">P_I_ATRG4_IBUF</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">34</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="warning" file="Route" num="455" delta="old" >CLK Net:<arg fmt="%s" index="1">P_IO_ECLK_IN_IBUF</arg> may have excessive skew because 
+   <arg fmt="%d" index="2">0</arg> CLK pins and <arg fmt="%d" index="3">1</arg> NON_CLK pins failed to route using a CLK template.
+</msg>
+
+<msg type="info" file="Timing" num="2761" delta="old" >N/A entries in the Constraints List may indicate that the constraint is not analyzed due to the following: No paths covered by this constraint; Other constraints intersect with this constraint; or This constraint was disabled by a Path Tracing Control. Please run the Timespec Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.</msg>
+
+</messages>
+

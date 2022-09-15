@@ -1,0 +1,183 @@
+###############################################################
+## Author   : Stefan Ritt
+## Contents : DRS4_EVAL4 FPGA constraint file
+## $Id: drs4_eval5.ucf 21696 2015-05-13 13:15:31Z ritt $
+###############################################################
+
+CONFIG PART = XC3S400-4TQ144 ;
+
+###############################################################
+# Timing constraints
+###############################################################
+
+# Timing group definitions
+# ------------------------
+NET "P_I_CLK33"          TNM_NET = "P_I_CLK33";
+NET "P_I_*"              TNM     = PADS:P_I_PADS_ALL;
+NET "P_I_CLK33"          TNM     = PADS:P_I_CLK33_PAD;
+NET "P_O_*"              TNM     = PADS:P_O_PADS;
+NET "P_IO_*"             TNM     = PADS:P_IO_PADS;
+
+NET "P_O_LED*"           TNM     = PADS:P_O_LED_PADS;
+
+NET "P_I_J*"             TNM     = PADS:P_I_EXT_PADS;
+NET "P_I_ATRG*"          TNM     = PADS:P_I_EXT_PADS; 
+NET "P_O_CAL"            TNM     = PADS:P_I_EXT_PADS; 
+NET "P_O_TCA_CTRL"       TNM     = PADS:P_I_EXT_PADS; 
+
+NET "P_IO_PMC_USR(28)"   TNM     = PADS:P_IO_PMC_USR28_PADS;
+
+TIMEGRP "P_I_PADS" = "P_I_PADS_ALL" EXCEPT "P_I_CLK33_PAD";
+
+# IFCLK is not connected to dedicated clock input
+# Following statement suppresses the error abort
+NET "P_I_CLK33" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# Same for external trigger input
+NET "P_IO_ETRG_IN" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# Fix Hold-Time-Violations
+# ------------------------
+NET "P_I_*"              IOBDELAY = IFD;
+NET "P_IO_*"             IOBDELAY = IFD;
+
+# Period constraint for 30 MHz main board clock oscillator
+# --------------------------------------------------------
+# 33 ns needed, 32 ns used -> 1 ns safety margin
+TIMESPEC "TS_P_I_CLK33" = PERIOD "P_I_CLK33" 32 ns HIGH 50 % INPUT_JITTER 100 ps;
+
+# Input pad setup/hold time constraints
+# -------------------------------------
+TIMEGRP "P_I_PADS"       OFFSET = IN 20 ns BEFORE "P_I_CLK33";
+TIMEGRP "P_IO_PADS"      OFFSET = IN 20 ns BEFORE "P_I_CLK33";
+
+# Output pad clock to output timing constraints
+# ---------------------------------------------
+TIMEGRP "P_O_PADS"       OFFSET = OUT 22 ns AFTER  "P_I_CLK33";
+TIMEGRP "P_IO_PADS"      OFFSET = OUT 22 ns AFTER  "P_I_CLK33";
+
+# remove noncritical contraints
+# -------------------------------
+TIMESPEC "TS_TIG_I_MMCX" = FROM "P_I_EXT_PADS" TO "FFS" TIG;
+TIMESPEC "TS_TIG_O_LED" = FROM "FFS" TO "P_O_LED_PADS" TIG;
+TIMESPEC "TS_TIG_O_EXT" = FROM "FFS" TO "P_O_EXT_PADS" TIG;
+TIMESPEC "TS_TIG_O_ADCCLK" = FROM "FFS" TO "P_IO_PMC_USR28_PADS" TIG;
+
+###############################################################
+# IOSTANDARD & pin drive speed constraints
+###############################################################
+
+NET "P_IO_*" IOSTANDARD = LVCMOS33;
+NET "P_I_*" IOSTANDARD = LVCMOS33;
+NET "P_O_*" IOSTANDARD = LVCMOS33;
+
+###############################################################
+# Pin location constraints
+###############################################################
+
+# 42 out of 64 PMC IOs
+# --------------------
+
+NET "P_I_CLK33"        LOC = "P40";  # IFCLK input
+NET "P_I_CLK66"        LOC = "P56";  # calibration quarz input
+
+NET "P_O_CAL"          LOC = "P97"  | IOSTANDARD = LVCMOS25;
+NET "P_O_TCA_CTRL"     LOC = "P53";  # timing calibration control
+
+NET "P_IO_J42"         LOC = "P141"; # J42
+NET "P_IO_J43"         LOC = "P140"; # J43
+NET "P_IO_T19"         LOC = "P108" | IOSTANDARD = LVCMOS25 | SLEW = FAST ; # T19
+NET "P_IO_T20"         LOC = "P103" | IOSTANDARD = LVCMOS25 | SLEW = FAST ; # T20
+
+NET "P_I_J44"          LOC = "P69";
+
+NET "P_I_ATRG1"        LOC = "P70";  # analog trigger CH1
+NET "P_I_ATRG1"        CLOCK_DEDICATED_ROUTE = FALSE;
+NET "P_I_ATRG2"        LOC = "P68";  # analog trigger CH2
+NET "P_I_ATRG2"        CLOCK_DEDICATED_ROUTE = FALSE;
+NET "P_I_ATRG3"        LOC = "P60";  # analog trigger CH3
+NET "P_I_ATRG3"        CLOCK_DEDICATED_ROUTE = FALSE;
+NET "P_I_ATRG4"        LOC = "P59";  # analog trigger CH4
+NET "P_I_ATRG4"        CLOCK_DEDICATED_ROUTE = FALSE;
+
+NET "P_IO_ETRG_IN"     LOC = "P107" | IOSTANDARD = LVCMOS25 | SLEW = FAST ; # external trigger in
+NET "P_O_ETRG_IND"     LOC = "P105" | IOSTANDARD = LVCMOS25; # external trigger in direciton
+
+NET "P_IO_ETRG_OUT"    LOC = "P104" | IOSTANDARD = LVCMOS25 | SLEW = FAST ; # external trigger out
+NET "P_O_ETRG_OUTD"    LOC = "P102" | IOSTANDARD = LVCMOS25; # external trigger out direction
+
+NET "P_IO_ECLK_IN"     LOC = "P100" | IOSTANDARD = LVCMOS25 | SLEW = FAST ; # external clock input
+NET "P_IO_ECLK_IN"     CLOCK_DEDICATED_ROUTE = FALSE;
+NET "P_O_ECLK_IND"     LOC = "P99"  | IOSTANDARD = LVCMOS25; # external clock input direction
+
+NET "P_IO_ECLK_OUT"    LOC = "P98"  | IOSTANDARD = LVCMOS25 | SLEW = FAST ; # external clock output
+NET "P_O_ECLK_OUTD"    LOC = "P93"  | IOSTANDARD = LVCMOS25; # external clock output direction
+
+NET "P_O_LED_GREEN"    LOC = "P132";
+NET "P_O_LED_YELLOW"   LOC = "P137";
+
+NET "P_IO_UC_SLOE"     LOC = "P17";
+NET "P_IO_UC_SLRD"     LOC = "P35";
+NET "P_IO_UC_SLWR"     LOC = "P36";
+NET "P_IO_UC_SLCS"     LOC = "P11";
+NET "P_IO_UC_PKTEND"   LOC = "P12";
+NET "P_IO_UC_FIFOADR0" LOC = "P14";
+NET "P_IO_UC_FIFOADR1" LOC = "P13";
+NET "P_IO_UC_FLAGA"    LOC = "P24";
+NET "P_IO_UC_FLAGB"    LOC = "P23";
+NET "P_IO_UC_FLAGC"    LOC = "P21";
+NET "P_I_UC_PA0"       LOC = "P20";
+
+NET "P_IO_UC_FD(0)"    LOC = "P30";
+NET "P_IO_UC_FD(1)"    LOC = "P31";
+NET "P_IO_UC_FD(2)"    LOC = "P32";
+NET "P_IO_UC_FD(3)"    LOC = "P33";
+NET "P_IO_UC_FD(4)"    LOC = "P28";
+NET "P_IO_UC_FD(5)"    LOC = "P27";
+NET "P_IO_UC_FD(6)"    LOC = "P26";
+NET "P_IO_UC_FD(7)"    LOC = "P25";
+NET "P_IO_UC_FD(8)"    LOC = "P10";
+NET "P_IO_UC_FD(9)"    LOC = "P8";
+NET "P_IO_UC_FD(10)"   LOC = "P7";
+NET "P_IO_UC_FD(11)"   LOC = "P6";
+NET "P_IO_UC_FD(12)"   LOC = "P5";
+NET "P_IO_UC_FD(13)"   LOC = "P1";
+NET "P_IO_UC_FD(14)"   LOC = "P2";
+NET "P_IO_UC_FD(15)"   LOC = "P4";
+
+NET "P_IO_PMC_USR(0)"  LOC = "P131";
+NET "P_IO_PMC_USR(2)"  LOC = "P130";
+NET "P_IO_PMC_USR(4)"  LOC = "P129";
+NET "P_IO_PMC_USR(6)"  LOC = "P128";
+NET "P_IO_PMC_USR(8)"  LOC = "P127";
+NET "P_IO_PMC_USR(10)"  LOC = "P125";
+NET "P_IO_PMC_USR(12)"  LOC = "P124";
+NET "P_IO_PMC_USR(14)"  LOC = "P123";
+NET "P_IO_PMC_USR(16)"  LOC = "P122";
+NET "P_IO_PMC_USR(18)"  LOC = "P119";
+NET "P_IO_PMC_USR(20)"  LOC = "P118";
+NET "P_IO_PMC_USR(22)"  LOC = "P116";
+NET "P_IO_PMC_USR(24)"  LOC = "P113";
+NET "P_IO_PMC_USR(26)"  LOC = "P112";
+NET "P_IO_PMC_USR(28)"  LOC = "P135";
+NET "P_IO_PMC_USR(29)"  LOC = "P50";
+NET "P_IO_PMC_USR(30)"  LOC = "P80" |  IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(31)"  LOC = "P51";
+NET "P_IO_PMC_USR(33)"  LOC = "P52";
+NET "P_IO_PMC_USR(35)"  LOC = "P44";
+NET "P_IO_PMC_USR(37)"  LOC = "P46";
+NET "P_IO_PMC_USR(39)"  LOC = "P47";
+NET "P_IO_PMC_USR(40)"  LOC = "P74"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(41)"  LOC = "P92"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(42)"  LOC = "P76"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(48)"  LOC = "P89"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(50)"  LOC = "P87"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(51)"  LOC = "P90"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(52)"  LOC = "P86"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(53)"  LOC = "P79"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(54)"  LOC = "P78"  | IOSTANDARD = LVDS_25;
+NET "P_IO_PMC_USR(55)"  LOC = "P77"  | IOSTANDARD = LVDS_25;
+NET "P_IO_PMC_USR(56)"  LOC = "P85"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(58)"  LOC = "P84"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(60)"  LOC = "P83"  | IOSTANDARD = LVCMOS25;
+NET "P_IO_PMC_USR(62)"  LOC = "P82"  | IOSTANDARD = LVCMOS25;
