@@ -1,4 +1,3 @@
---hi
 --#############################################################
 -- Author   : Stefan Ritt
 -- Contents : DRS4 Evaluation Board FPGA top level entity
