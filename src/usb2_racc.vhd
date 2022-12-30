@@ -20,7 +20,11 @@ entity usb2_racc is
 	 TRIG1 						: in std_logic; 
 	 TRIG2 						: in std_logic; 
 	 TRIG3 						: in std_logic; 
-	 TRIG4 						: in std_logic; 
+	 TRIG4 						: in std_logic;
+
+		-- global trigger
+		 -- -----------------------------------
+		 global_trigger 			: in std_logic;	 
 
     -- Lines to from C8051 microcontroller
     -- -----------------------------------
@@ -63,7 +67,7 @@ architecture arch of usb2_racc is
 	COMPONENT oversamplerTDC
 		PORT(
 			CLK_IN : IN std_logic;
-			ENABLE_IN : IN std_logic;
+--			ENABLE_IN : IN std_logic;
 			START_IN : IN std_logic;
 			STOP_IN : IN std_logic;
 			RESET_IN : IN std_logic;          
@@ -98,11 +102,12 @@ architecture arch of usb2_racc is
   end component;
   
   -- TDC Signals
-  signal enable : std_logic := '1'; -- tdc enable signal set to 1 always
+--  signal en : std_logic := '1'; -- tdc enable signal set to 1 always
   signal datavld : std_logic; -- data valid signal
   signal start : std_logic; -- start signal
   signal stop : std_logic; -- stop signal
-  signal tdc_data     : std_logic_vector(15 downto 0); -- TDC data
+  signal tdc_data : std_logic_vector(15 downto 0); -- TDC data
+  signal counter_up: std_logic_vector(14 downto 0); -- 15 bit counter
   
 
   -- UC I/O pin control signals
@@ -160,10 +165,10 @@ architecture arch of usb2_racc is
 
 begin
 	-- start signal for tdc anding trigger 1, trigger 2, trigger 4
-	start <= TRIG1 and TRIG2 and TRIG4;
+	start <= not TRIG3; --and TRIG2 and TRIG4;
 	
 	-- direct stop signal from trigger 3
-	stop <= TRIG3;
+	stop <= global_trigger;
 	
   O_CONTROL_REG_ARR       <= control_reg_arr;
   status_reg_arr          <= I_STATUS_REG_ARR;
@@ -173,7 +178,7 @@ begin
  --- Instantiation for TDC in usb2_racc
   Inst_oversamplerTDC: oversamplerTDC PORT MAP(
 		CLK_IN => I_CLK33, -- 33 Mhz clock
-		ENABLE_IN => enable, -- enable signal
+--		ENABLE_IN => en, -- enable signal
 		START_IN => start, -- start signal
 		STOP_IN => stop, -- stop signal
 		RESET_IN => I_RESET, -- global reset signal
@@ -256,7 +261,7 @@ begin
 
   process(I_RESET, I_CLK33, datavld)
   begin
-  
+	
     if (I_RESET = '1') then
 
       control_reg_arr   <= (others => X"00000000");
@@ -298,11 +303,14 @@ begin
 
     elsif rising_edge(I_CLK33) then
 	 
+	 --counter_up <= counter_up + x"1"; -- 15 bit counter
+--	 if (counter_up = ''
+	 --en <= control_reg_arr(9)(31);
 --------------------------------------------------------------------------------------------------
 -- check whether datavld is high and then write bits to the control reg no. 9 (offset 0x24) ----
 --------------------------------------------------------------------------------------------------
 			if (datavld = '1') then
-				control_reg_arr(9)(31 downto 17) <= "000000000000000"; -- 15 bits as 0
+				control_reg_arr(9)(31 downto 17) <= "111111111111111"; -- 15 bits as counter				
 				control_reg_arr(9)(16) <= datavld; -- 17th bit as data valid
 				control_reg_arr(9)(15 downto 0) <= tdc_data; -- TDC data bits
 			end if;
