@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-HGCAL-PC::  Thu Sep 15 05:17:48 2022
+HGCAL-PC::  Thu Dec 29 19:43:50 2022
 
 par -w -intstyle ise -ol high -t 1 drs4_eval5_map.ncd drs4_eval5.ncd
 drs4_eval5.pcf 
@@ -11,11 +11,11 @@ Constraints file: drs4_eval5.pcf.
 Loading device for application Rf_Device from file '3s400.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
    "drs4_eval5" is an NCD, version 3.2, device xc3s400, package tq144, speed -4
 WARNING:ConstraintSystem - The Offset constraint <TIMEGRP "P_I_PADS" OFFSET = IN 20 ns BEFORE COMP "P_I_CLK33";>
-   [drs4_eval5.pcf(1359)], is specified without a duration.  This will result in a lack of hold time checks in timing
+   [drs4_eval5.pcf(1372)], is specified without a duration.  This will result in a lack of hold time checks in timing
    reports.  If hold time checks are desired a duration value should be specified following the 'VALID' keyword.
 
 WARNING:ConstraintSystem - The Offset constraint <TIMEGRP "P_IO_PADS" OFFSET = IN 20 ns BEFORE COMP "P_I_CLK33";>
-   [drs4_eval5.pcf(1360)], is specified without a duration.  This will result in a lack of hold time checks in timing
+   [drs4_eval5.pcf(1373)], is specified without a duration.  This will result in a lack of hold time checks in timing
    reports.  If hold time checks are desired a duration value should be specified following the 'VALID' keyword.
 
 
@@ -28,7 +28,7 @@ Device speed data version:  "PRODUCTION 1.39 2013-10-13".
 
 Device Utilization Summary:
 
-   Number of BUFGMUXs                        4 out of 8      50%
+   Number of BUFGMUXs                        6 out of 8      75%
    Number of DCMs                            2 out of 4      50%
    Number of External DIFFMs                 1 out of 46      2%
       Number of LOCed DIFFMs                 1 out of 1     100%
@@ -61,7 +61,7 @@ Total REAL time at the beginning of Placer: 2 secs
 Total CPU  time at the beginning of Placer: 2 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:a25ac5f9) REAL time: 2 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:4094dba4) REAL time: 2 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:837 - Partially locked IO Bus is found. 
@@ -121,16 +121,23 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
 
 INFO:Place:834 - Only a subset of IOs are locked. Out of 89 IOs, 82 are locked and 7 are not locked. If you would like
    to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:a25ac5f9) REAL time: 2 secs 
+Phase 2.7  Design Feasibility Check (Checksum:4094dba4) REAL time: 2 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:a25ac5f9) REAL time: 2 secs 
+Phase 3.31  Local Placement Optimization (Checksum:4094dba4) REAL time: 2 secs 
 
 WARNING:Place:414 - The input design contains local clock signal(s). To get a better result, we recommend users run map
    with the "-timing" option set before starting the placement.
 Phase 4.2  Initial Clock and IO Placement
-.......
-............................
+......
+......................
+WARNING:Place:1019 - A clock IOB / clock component pair have been found that are not placed at an optimal clock IOB /
+   clock site pair. The clock component <P_I_ATRG3_IBUF_BUFG> is placed at site <BUFGMUX1>. The IO component <P_I_ATRG3>
+   is placed at site <P60>.  This will not allow the use of the fast path between the IO and the Clock buffer. This is
+   normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN <P_I_ATRG3.PAD> allowing your
+   design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN. The use of
+   this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error
+   condition be corrected in the design.
 WARNING:Place:1019 - A clock IOB / clock component pair have been found that are not placed at an optimal clock IOB /
    clock site pair. The clock component <clocks_inst_bufg_clk33_i> is placed at site <BUFGMUX3>. The IO component
    <P_I_CLK33> is placed at site <P40>.  This will not allow the use of the fast path between the IO and the Clock
@@ -138,33 +145,33 @@ WARNING:Place:1019 - A clock IOB / clock component pair have been found that are
    allowing your design to continue. This constraint disables all clock placer rules related to the specified COMP.PIN.
    The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that
    this error condition be corrected in the design.
-Phase 4.2  Initial Clock and IO Placement (Checksum:f53a04ce) REAL time: 3 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:bfa55a5e) REAL time: 3 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:f53a04ce) REAL time: 3 secs 
+Phase 5.36  Local Placement Optimization (Checksum:bfa55a5e) REAL time: 3 secs 
 
 Phase 6.3  Local Placement Optimization
 ......
-Phase 6.3  Local Placement Optimization (Checksum:e3e67d89) REAL time: 3 secs 
+Phase 6.3  Local Placement Optimization (Checksum:3ab2785) REAL time: 3 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:4e6ba7b8) REAL time: 3 secs 
+Phase 7.5  Local Placement Optimization (Checksum:b5609dc8) REAL time: 3 secs 
 
 Phase 8.8  Global Placement
 ..
-..........................................................................
-....................................................................
-...................
-Phase 8.8  Global Placement (Checksum:6c5e0aae) REAL time: 7 secs 
+..................................................................................................
+................................................
+..................
+Phase 8.8  Global Placement (Checksum:97535d55) REAL time: 7 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:6c5e0aae) REAL time: 7 secs 
+Phase 9.5  Local Placement Optimization (Checksum:97535d55) REAL time: 7 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:6b127c2) REAL time: 9 secs 
+Phase 10.18  Placement Optimization (Checksum:4bf801dd) REAL time: 9 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:6b127c2) REAL time: 9 secs 
+Phase 11.5  Local Placement Optimization (Checksum:4bf801dd) REAL time: 9 secs 
 
 Total REAL time to Placer completion: 9 secs 
 Total CPU  time to Placer completion: 9 secs 
@@ -175,44 +182,46 @@ Writing design to file drs4_eval5.ncd
 Starting Router
 
 
-Phase  1  : 19021 unrouted;      REAL time: 10 secs 
+Phase  1  : 19265 unrouted;      REAL time: 10 secs 
 
-Phase  2  : 17709 unrouted;      REAL time: 10 secs 
+Phase  2  : 17880 unrouted;      REAL time: 10 secs 
 
-Phase  3  : 9383 unrouted;      REAL time: 12 secs 
+Phase  3  : 9352 unrouted;      REAL time: 11 secs 
 
-Phase  4  : 9383 unrouted; (Setup:0, Hold:4538, Component Switching Limit:0)     REAL time: 12 secs 
+Phase  4  : 9352 unrouted; (Setup:0, Hold:17118, Component Switching Limit:0)     REAL time: 12 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:268, Component Switching Limit:0)     REAL time: 18 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:2211, Component Switching Limit:0)     REAL time: 19 secs 
 
 Updating file: drs4_eval5.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:268, Component Switching Limit:0)     REAL time: 19 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:2211, Component Switching Limit:0)     REAL time: 21 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:268, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:2211, Component Switching Limit:0)     REAL time: 21 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:268, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:2211, Component Switching Limit:0)     REAL time: 21 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:268, Component Switching Limit:0)     REAL time: 20 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:2211, Component Switching Limit:0)     REAL time: 21 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 
-Phase 11  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 21 secs 
+Phase 11  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 WARNING:Route:455 - CLK Net:P_I_ATRG1_IBUF may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:P_I_ATRG2_IBUF may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:P_I_ATRG4_IBUF may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:P_IO_ECLK_IN_IBUF may have excessive skew because 
       0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:P_I_CLK33_IBUFG may have excessive skew because 
       8 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
-WARNING:Route:455 - CLK Net:P_I_ATRG2_IBUF may have excessive skew because 
-      7 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
-WARNING:Route:455 - CLK Net:P_I_ATRG3_IBUF may have excessive skew because 
-      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
-WARNING:Route:455 - CLK Net:P_I_ATRG4_IBUF may have excessive skew because 
-      34 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
-WARNING:Route:455 - CLK Net:P_IO_ECLK_IN_IBUF may have excessive skew because 
-      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:global_reset may have excessive skew because 
+      0 CLK pins and 144 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:P_IO_ETRG_OUT_OBUF may have excessive skew because 
+      1 CLK pins and 16 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 21 secs 
-Total CPU time to Router completion: 21 secs 
+Total REAL time to Router completion: 22 secs 
+Total CPU time to Router completion: 22 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -230,27 +239,31 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|   drs_dpram/I_CLK_B |      BUFGMUX7| No   |  913 |  0.061     |  1.075      |
+|   drs_dpram/I_CLK_B |      BUFGMUX4| No   |  928 |  0.061     |  1.075      |
 +---------------------+--------------+------+------+------------+-------------+
 |         clk33_nodll |      BUFGMUX3| No   |    6 |  0.019     |  1.033      |
 +---------------------+--------------+------+------+------------+-------------+
+|   app_drs_hard_trig |      BUFGMUX0| No   |   36 |  0.020     |  1.034      |
++---------------------+--------------+------+------+------------+-------------+
+|      P_I_ATRG3_IBUF |      BUFGMUX1| No   |   47 |  0.020     |  1.034      |
++---------------------+--------------+------+------+------------+-------------+
 |   drs_dpram/I_CLK_A |      BUFGMUX5| No   |   34 |  0.020     |  1.034      |
 +---------------------+--------------+------+------+------------+-------------+
-|      P_I_ATRG1_IBUF |         Local|      |   36 |  0.536     |  3.402      |
+|        global_reset |         Local|      |  339 |  0.000     |  3.162      |
 +---------------------+--------------+------+------+------------+-------------+
-|     P_I_CLK33_IBUFG |         Local|      |    9 |  2.997     |  4.322      |
+|  P_IO_ETRG_OUT_OBUF |         Local|      |   17 |  0.000     |  2.652      |
 +---------------------+--------------+------+------+------------+-------------+
-|   app_drs_hard_trig |         Local|      |   36 |  0.175     |  2.968      |
+|      P_I_ATRG1_IBUF |         Local|      |   36 |  0.635     |  3.270      |
 +---------------------+--------------+------+------+------------+-------------+
-|      P_I_ATRG2_IBUF |         Local|      |   36 |  1.140     |  4.237      |
+|      P_I_ATRG2_IBUF |         Local|      |   36 |  0.677     |  3.309      |
 +---------------------+--------------+------+------+------------+-------------+
-|      P_I_ATRG3_IBUF |         Local|      |   37 |  0.365     |  3.332      |
+|      P_I_ATRG4_IBUF |         Local|      |   36 |  0.276     |  3.154      |
 +---------------------+--------------+------+------+------------+-------------+
-|      P_I_ATRG4_IBUF |         Local|      |   36 |  3.339     |  6.471      |
+|   P_IO_ECLK_IN_IBUF |         Local|      |   36 |  0.591     |  3.268      |
 +---------------------+--------------+------+------+------------+-------------+
-|   P_IO_ECLK_IN_IBUF |         Local|      |   36 |  0.403     |  3.214      |
+|     P_I_CLK33_IBUFG |         Local|      |    9 |  1.799     |  5.700      |
 +---------------------+--------------+------+------+------------+-------------+
-|     app_drs_trigger |         Local|      |    1 |  0.000     |  2.293      |
+|     app_drs_trigger |         Local|      |    1 |  0.000     |  3.070      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -270,32 +283,32 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clocks_clk33_tmp = PERIOD TIMEGRP "clo | SETUP       |     2.110ns|    27.780ns|       0|           0
-  cks_clk33_tmp" TS_P_I_CLK33 HIGH 50%      | HOLD        |     0.798ns|            |       0|           0
+  TS_clocks_clk33_tmp = PERIOD TIMEGRP "clo | SETUP       |     2.850ns|    26.300ns|       0|           0
+  cks_clk33_tmp" TS_P_I_CLK33 HIGH 50%      | HOLD        |     0.750ns|            |       0|           0
       INPUT_JITTER 0.1 ns                   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_clocks_clk66_dcm1_tmp = PERIOD TIMEGRP | SETUP       |     3.059ns|    12.941ns|       0|           0
-   "clocks_clk66_dcm1_tmp" TS_P_I_CLK33     | HOLD        |     0.932ns|            |       0|           0
-       / 2 HIGH 50% INPUT_JITTER 0.1 ns     |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TIMEGRP "P_IO_PADS" OFFSET = OUT 22 ns AF | MAXDELAY    |     4.107ns|    17.893ns|       0|           0
+  TIMEGRP "P_IO_PADS" OFFSET = OUT 22 ns AF | MAXDELAY    |     5.012ns|    16.988ns|       0|           0
   TER COMP "P_I_CLK33"                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TIMEGRP "P_O_PADS" OFFSET = OUT 22 ns AFT | MAXDELAY    |     7.006ns|    14.994ns|       0|           0
+  TS_clocks_clk66_dcm1_tmp = PERIOD TIMEGRP | SETUP       |     5.719ns|    10.281ns|       0|           0
+   "clocks_clk66_dcm1_tmp" TS_P_I_CLK33     | HOLD        |     1.024ns|            |       0|           0
+       / 2 HIGH 50% INPUT_JITTER 0.1 ns     |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TIMEGRP "P_O_PADS" OFFSET = OUT 22 ns AFT | MAXDELAY    |     7.362ns|    14.638ns|       0|           0
   ER COMP "P_I_CLK33"                       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_P_I_CLK33 = PERIOD TIMEGRP "P_I_CLK33" | SETUP       |    19.105ns|    12.895ns|       0|           0
-   32 ns HIGH 50% INPUT_JITTER 0.1 ns       | HOLD        |     0.955ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  TIMEGRP "P_I_PADS" OFFSET = IN 20 ns BEFO | SETUP       |    19.073ns|     0.927ns|       0|           0
-  RE COMP "P_I_CLK33"                       |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TIMEGRP "P_IO_PADS" OFFSET = IN 20 ns BEF | SETUP       |    19.725ns|     0.275ns|       0|           0
+  TIMEGRP "P_IO_PADS" OFFSET = IN 20 ns BEF | SETUP       |     8.840ns|    11.160ns|       0|           0
   ORE COMP "P_I_CLK33"                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_TIG_I_MMCX_path" TIG             | MAXDELAY    |         N/A|    14.525ns|     N/A|           0
+  TS_P_I_CLK33 = PERIOD TIMEGRP "P_I_CLK33" | SETUP       |    19.724ns|    12.276ns|       0|           0
+   32 ns HIGH 50% INPUT_JITTER 0.1 ns       | HOLD        |     0.798ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_TIG_O_LED_path" TIG              | MAXDELAY    |         N/A|     8.435ns|     N/A|           0
+  TIMEGRP "P_I_PADS" OFFSET = IN 20 ns BEFO | SETUP       |    17.186ns|     2.814ns|       0|           0
+  RE COMP "P_I_CLK33"                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_I_MMCX_path" TIG             | SETUP       |         N/A|    18.117ns|     N/A|           0
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_TIG_O_LED_path" TIG              | MAXDELAY    |         N/A|     8.395ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
   PATH "TS_TIG_O_ADCCLK_path" TIG           | MAXDELAY    |         N/A|     4.810ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
@@ -311,9 +324,9 @@ Derived Constraints for TS_P_I_CLK33
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_P_I_CLK33                   |     32.000ns|     12.895ns|     27.780ns|            0|            0|         1688|        34942|
-| TS_clocks_clk33_tmp           |     32.000ns|     27.780ns|          N/A|            0|            0|        33677|            0|
-| TS_clocks_clk66_dcm1_tmp      |     16.000ns|     12.941ns|          N/A|            0|            0|         1265|            0|
+|TS_P_I_CLK33                   |     32.000ns|     12.276ns|     26.300ns|            0|            0|         1688|        35921|
+| TS_clocks_clk33_tmp           |     32.000ns|     26.300ns|          N/A|            0|            0|        34656|            0|
+| TS_clocks_clk66_dcm1_tmp      |     16.000ns|     10.281ns|          N/A|            0|            0|         1265|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -328,17 +341,17 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 22 secs 
-Total CPU time to PAR completion: 22 secs 
+Total REAL time to PAR completion: 23 secs 
+Total CPU time to PAR completion: 23 secs 
 
-Peak Memory Usage:  334 MB
+Peak Memory Usage:  347 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 12
+Number of warning messages: 14
 Number of info messages: 2
 
 Writing design to file drs4_eval5.ncd

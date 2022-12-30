@@ -9,7 +9,7 @@ Target Device  : xc3s400
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3 -- $Revision: 1.55 $
-Mapped Date    : Thu Sep 15 05:17:41 2022
+Mapped Date    : Thu Dec 29 19:43:43 2022
 
 Mapping design into LUTs...
 WARNING:MapLib:793 - Bi-directional network P_IO_PMC_USR(43) is driven by a
@@ -86,7 +86,7 @@ Running delay-based LUT packing...
 Running related packing...
 Running unrelated packing...
 Updating timing models...
-WARNING:PhysDesignRules:372 - Gated clock. Clock net app_drs_hard_trig is
+WARNING:PhysDesignRules:372 - Gated clock. Clock net P_IO_ETRG_OUT_OBUF is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net app_drs_trigger is sourced
@@ -100,16 +100,18 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   33
 Logic Utilization:
-  Number of Slice Flip Flops:         1,764 out of   7,168   24%
-  Number of 4 input LUTs:             5,127 out of   7,168   71%
+  Total Number Slice Registers:       1,788 out of   7,168   24%
+    Number used as Flip Flops:        1,774
+    Number used as Latches:              14
+  Number of 4 input LUTs:             5,170 out of   7,168   72%
 Logic Distribution:
   Number of occupied Slices:          3,582 out of   3,584   99%
     Number of Slices containing only related logic:   3,582 out of   3,582 100%
     Number of Slices containing unrelated logic:          0 out of   3,582   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       5,188 out of   7,168   72%
-    Number used as logic:             5,127
-    Number used as a route-thru:         61
+  Total Number of 4 input LUTs:       5,242 out of   7,168   73%
+    Number used as logic:             5,170
+    Number used as a route-thru:         72
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
@@ -119,12 +121,12 @@ Logic Distribution:
     IOB Master Pads:                      1
     IOB Slave Pads:                       1
   Number of RAMB16s:                     16 out of      16  100%
-  Number of BUFGMUXs:                     4 out of       8   50%
+  Number of BUFGMUXs:                     6 out of       8   75%
   Number of DCMs:                         2 out of       4   50%
 
-Average Fanout of Non-Clock Nets:                2.69
+Average Fanout of Non-Clock Nets:                2.62
 
-Peak Memory Usage:  280 MB
+Peak Memory Usage:  285 MB
 Total REAL time to MAP completion:  5 secs 
 Total CPU time to MAP completion:   5 secs 
 

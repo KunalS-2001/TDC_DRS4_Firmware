@@ -37,7 +37,7 @@ Port (
         start_CC        : in std_logic;
         stop_CC         : in std_logic;
         reset_CC        : in std_logic;
-        Enable_CC       : in std_logic;
+--        Enable_CC       : in std_logic;
         Valid_CC        : out std_logic;
         CountOutCC      : out std_logic_vector(11 downto 0)
          );
@@ -56,12 +56,12 @@ begin
 
 
 
-process (clk_CC,reset_CC,start_CC,stop_CC,Enable_CC) --,start,stop)
+process (clk_CC,reset_CC,start_CC,stop_CC)--,Enable_CC) --,start,stop)
 variable outputBits : std_logic_vector(11 downto 0);
 begin
  
 
-   if Enable_CC  = '1' then 
+   --if Enable_CC  = '1' then 
 		  if (reset_CC = '1') then --Make signals zero
                 count <= (others => '0');    
                 IS_Counting  <= '0';
@@ -81,9 +81,9 @@ begin
 						count <= count + 1;
 			  end if;
 		  end if;
-	  else 
-			  outputBits := (others=>'0') ;
-	  end if;   
+	  --else 
+			  --outputBits := (others=>'0') ;
+	  --end if;   
   CountOutCC <= outputBits ; 
   Valid_CC <= vldCC;
 end process;

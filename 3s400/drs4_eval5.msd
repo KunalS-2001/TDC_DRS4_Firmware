@@ -4,7 +4,7 @@ Design name: 	drs4_eval5.ncd;UserID=0xFFFFFFFF
 Architecture:	spartan3
 Part:        	3s400tq144
 Type:        	mask
-Date:        	Thu Sep 15 05:18:25 2022
+Date:        	Thu Dec 29 19:44:23 2022
 Bits:        	1695744
 11111111111111111111111111111111
 11111111111111111111111111111111

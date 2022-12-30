@@ -3,29 +3,31 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -uc
-C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf -p
+C:/Users/hcal/Documents/TDC_Firmw_rev2/drs4eb/firmware/ucf/drs4_eval5.ucf -p
 xc3s400-tq144-4 drs4_eval5.ngc drs4_eval5.ngd
 
 Reading NGO file
-"C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/3s400/drs4_eval5.ngc" ...
+"C:/Users/hcal/Documents/TDC_Firmw_rev2/drs4eb/firmware/3s400/drs4_eval5.ngc"
+...
 Gathering constraint information from source properties...
 Done.
 
 Annotating constraints to design from ucf file
-"C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf" ...
+"C:/Users/hcal/Documents/TDC_Firmw_rev2/drs4eb/firmware/ucf/drs4_eval5.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
 WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_TIG_O_EXT" = FROM "FFS"
    TO "P_O_EXT_PADS" TIG;>
-   [C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf(63)]:
-   Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync' constraint named
+   [C:/Users/hcal/Documents/TDC_Firmw_rev2/drs4eb/firmware/ucf/drs4_eval5.ucf(63
+   )]: Unable to find an active 'TimeGrp' or 'TNM' or 'TPSync' constraint named
    'P_O_EXT_PADS'.
 
 WARNING:ConstraintSystem - TNM : P_I_PADS_ALL was distributed to a DCM but new
    TNM constraints were not derived. This TNM is used in the following user
    groups or specifications:
    <TIMEGRP "P_I_PADS" = "P_I_PADS_ALL" EXCEPT "P_I_CLK33_PAD";>
-   [C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf(30)]
+   [C:/Users/hcal/Documents/TDC_Firmw_rev2/drs4eb/firmware/ucf/drs4_eval5.ucf(30
+   )]
 
 INFO:ConstraintSystem:178 - TNM 'P_I_CLK33', used in period specification
    'TS_P_I_CLK33', was traced into DCM instance clocks_Inst_dcm1_clk132. The
@@ -43,15 +45,15 @@ INFO:ConstraintSystem:178 - TNM 'P_I_CLK33', used in period specification
 
 WARNING:ConstraintSystem - The Offset constraint <TIMEGRP "P_I_PADS"      
    OFFSET = IN 20 ns BEFORE "P_I_CLK33";>
-   [C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf(51)],
-   is specified without a duration.  This will result in a lack of hold time
+   [C:/Users/hcal/Documents/TDC_Firmw_rev2/drs4eb/firmware/ucf/drs4_eval5.ucf(51
+   )], is specified without a duration.  This will result in a lack of hold time
    checks in timing reports.  If hold time checks are desired a duration value
    should be specified following the 'VALID' keyword.
 
 WARNING:ConstraintSystem - The Offset constraint <TIMEGRP "P_IO_PADS"     
    OFFSET = IN 20 ns BEFORE "P_I_CLK33";>
-   [C:/Users/hcal/Documents/TDC_Firmw/drs4eb/firmware/ucf/drs4_eval5.ucf(52)],
-   is specified without a duration.  This will result in a lack of hold time
+   [C:/Users/hcal/Documents/TDC_Firmw_rev2/drs4eb/firmware/ucf/drs4_eval5.ucf(52
+   )], is specified without a duration.  This will result in a lack of hold time
    checks in timing reports.  If hold time checks are desired a duration value
    should be specified following the 'VALID' keyword.
 
@@ -142,7 +144,7 @@ WARNING:NgdBuild:440 - FF primitive
    'usb2_racc_interface_uc_iofds_inst_gen[22].FF2' has unconnected output pin
 WARNING:NgdBuild:440 - FF primitive
    'usb2_racc_interface_uc_iofds_inst_gen[23].FF2' has unconnected output pin
-WARNING:NgdBuild:452 - logical net 'N1022' has no driver
+WARNING:NgdBuild:452 - logical net 'N988' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -155,7 +157,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  47
 
-Total memory usage is 180536 kilobytes
+Total memory usage is 184576 kilobytes
 
 Writing NGD file "drs4_eval5.ngd" ...
 Total REAL time to NGDBUILD completion:  4 sec

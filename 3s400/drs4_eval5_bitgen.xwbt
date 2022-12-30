@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\hcal\Documents\TDC_Firmw\drs4eb\firmware\3s400\drs4_eval5.ncd
-OUTFILE=C:\Users\hcal\Documents\TDC_Firmw\drs4eb\firmware\3s400\drs4_eval5.bit
+INFILE=C:\Users\hcal\Documents\TDC_Firmw_rev2\drs4eb\firmware\3s400\drs4_eval5.ncd
+OUTFILE=C:\Users\hcal\Documents\TDC_Firmw_rev2\drs4eb\firmware\3s400\drs4_eval5.bit
 FAMILY=Spartan3
 PART=xc3s400-4tq144
-WORKINGDIR=C:\Users\hcal\Documents\TDC_Firmw\drs4eb\firmware\3s400
+WORKINGDIR=C:\Users\hcal\Documents\TDC_Firmw_rev2\drs4eb\firmware\3s400
 LICENSE=WebPack
 USER_INFO=212526277_0_0_819

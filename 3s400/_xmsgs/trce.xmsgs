@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;TIMEGRP &quot;P_I_PADS&quot; OFFSET = IN 20 ns BEFORE COMP &quot;P_I_CLK33&quot;;&gt; [drs4_eval5.pcf(1359)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
+<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;TIMEGRP &quot;P_I_PADS&quot; OFFSET = IN 20 ns BEFORE COMP &quot;P_I_CLK33&quot;;&gt; [drs4_eval5.pcf(1372)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;TIMEGRP &quot;P_IO_PADS&quot; OFFSET = IN 20 ns BEFORE COMP &quot;P_I_CLK33&quot;;&gt; [drs4_eval5.pcf(1360)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
+<msg type="warning" file="ConstraintSystem" num="0" >The Offset constraint &lt;TIMEGRP &quot;P_IO_PADS&quot; OFFSET = IN 20 ns BEFORE COMP &quot;P_I_CLK33&quot;;&gt; [drs4_eval5.pcf(1373)], is specified without a duration.  This will result in a lack of hold time checks in timing reports.  If hold time checks are desired a duration value should be specified following the &apos;VALID&apos; keyword.
 </msg>
 
 <msg type="info" file="Timing" num="3386" delta="old" >Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.</msg>

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Sep 15 05:17:45 2022
+// Written by: Map P.20131013 on Thu Dec 29 19:43:47 2022
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -457,8 +457,21 @@ TIMEGRP clocks_clk33_tmp = BEL "app_serdes_state_FSM_FFd2" BEL
         "app_drs_dpram_d_wr1_6" BEL "app_drs_dpram_d_wr1_5" BEL
         "app_drs_dpram_d_wr1_4" BEL "app_drs_dpram_d_wr1_3" BEL
         "app_drs_dpram_d_wr1_2" BEL "app_drs_dpram_d_wr1_1" BEL
-        "app_drs_dpram_d_wr1_0" BEL "usb2_racc_interface_uc_state_FSM_FFd11"
-        BEL "usb2_racc_interface_uc_state_FSM_FFd12" BEL
+        "app_drs_dpram_d_wr1_0" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_0" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_1" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_2" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_3" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_4" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_5" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_6" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_7" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_8" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_9" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_10" BEL
+        "usb2_racc_interface_Inst_oversamplerTDC_coraseCounter_count_11" BEL
+        "usb2_racc_interface_uc_state_FSM_FFd11" BEL
+        "usb2_racc_interface_uc_state_FSM_FFd12" BEL
         "usb2_racc_interface_uc_state_FSM_FFd13" BEL
         "usb2_racc_interface_uc_state_FSM_FFd14" BEL
         "usb2_racc_interface_uc_state_FSM_FFd15" BEL
@@ -1137,8 +1150,8 @@ TIMEGRP clocks_clk33_tmp = BEL "app_serdes_state_FSM_FFd2" BEL
         "usb2_racc_interface_locbus_addr_10" BEL
         "usb2_racc_interface_O_CONTROL_TRIG_ARR(4)_2" BEL
         "usb2_racc_interface_O_CONTROL_TRIG_ARR(4)_0" BEL
-        "app_drs_led_state_FSM_FFd1" BEL "app_serial_count_1_1" BEL
-        "app_serial_count_5_1" BEL "app_pmc_iofds_inst_bit_56_gen[0].FF1" BEL
+        "app_drs_led_state_FSM_FFd1" BEL
+        "app_pmc_iofds_inst_bit_56_gen[0].FF1" BEL
         "app_pmc_iofds_inst_bit_58_gen[0].FF1" BEL
         "app_pmc_iofds_inst_bit_60_gen[0].FF1" BEL
         "app_pmc_iofds_inst_bit_62_gen[0].FF1" BEL

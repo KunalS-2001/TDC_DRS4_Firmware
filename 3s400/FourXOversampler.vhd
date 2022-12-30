@@ -40,7 +40,7 @@ entity FourXOversampler is
            CLK_4x : in STD_LOGIC;
            SIG_4x : in STD_LOGIC;
            RESET_4x : in STD_LOGIC;
-           ENABLE_4x : in std_logic; 
+           ENABLE_4x : inout std_logic; 
            DATA_READY_4x : out STD_LOGIC:='0';
            OUTPUT_4x : out std_logic_vector(3 downto 0)
            );
@@ -70,8 +70,9 @@ component design_1 is
 end component;
 
 signal overSamplerOuts : std_logic_vector(3 downto 0) := "0000";
-signal counterToDataReady : std_logic_vector(3 downto 0) := (others=>'0'); 
+signal counterToDataReady : std_logic_vector(3 downto 0) := "0000"; 
 signal IS_COUNTING : std_logic := '0';
+signal outputBits : std_logic_vector(3 downto 0);
 --signal clk : std_logic := '0';
 --signal sig : std_logic := '0';
 
@@ -79,16 +80,16 @@ begin
 
 fourXOverSampler : design_1
    port map (
-        SIG  => SIG_4x ,
+        SIG => SIG_4x ,
         CLK  => CLK_4x ,
-        out1 => overSamplerOuts(0),
-        out2 => overSamplerOuts(1),
-        out3 => overSamplerOuts(2),
-        out4 => overSamplerOuts(3),
+        out1 => outputBits(0),
+        out2 => outputBits(1),
+        out3 => outputBits(2),
+        out4 => outputBits(3),
        RESET => RESET_4x
    );
 
-process (SIG_4x, RESET_4x, CLK_4x)
+process (SIG_4x, RESET_4x, CLK_4x,Enable_4x)
     variable outputBits : std_logic_vector(3 downto 0);
 begin 
 
@@ -101,20 +102,25 @@ begin
         if SIG_4x = '1' then
             DATA_READY_4x <= '0';
             IS_COUNTING  <= '1';
-        end if;
+				counterToDataReady <= counterToDataReady + x"1";
+				outputBits:= overSamplerOuts(3 downto 0);
+					 
+				end if;
+				 --
+        --end if;
         
         if IS_COUNTING = '1' then
-                counterToDataReady <= counterToDataReady +1;
-                if (counterToDataReady = "0011") then
+               if (counterToDataReady = "0011") then
                     DATA_READY_4x <= '1';
-                    outputBits := overSamplerOuts(3 downto 0);
+                    OUTPUT_4x  <= outputBits;
                     counterToDataReady <= "0000";
                 end if;
+                
           end if;
      else 
         outputBits := "0000";
      end if;    
-        OUTPUT_4x  <= outputBits;
+       OUTPUT_4x  <= outputBits;
     
         
 end process;
